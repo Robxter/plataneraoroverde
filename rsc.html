@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Platanera Oro Verde — Responsabilidad Social Corporativa</title>
+
+  <!-- AOS (Animate On Scroll) CDN -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico">
+</head>
+<body>
+
+  <!-- HEADER (común a todas las páginas) -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Platanera Oro Verde — Inicio">
+        <img src="assets/images/header-side.png" alt="Logo Platanera Oro Verde" />
+      </a>
+
+      <!-- nav: enlaces organizados a la derecha; solo 'Descubre' conserva un dropdown -->
+    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
+        <ul>
+            <li><a href="historia.html">Nuestra historia</a></li>
+
+            <!-- Descubre: dropdown sólo aquí -->
+            <li class="has-dropdown">
+            <a class="dropdown-toggle" aria-expanded="false">Descubre ▾</a>
+              <ul class="dropdown" aria-label="submenu descubre">
+                  <li><a href="products/platano.html">Plátano</a></li>
+                  <li><a href="products/chips.html">Chips</a></li>
+              </ul>
+            </li>
+
+            <li><a href="operaciones.html">Operaciones</a></li>
+            <li><a href="rsc.html">RSC</a></li>
+            <li><a href="financiero.html">Financiero</a></li>
+
+            <!-- siempre visible en landing (por CSS .page.home) -->
+            <li><a class="contact-link" href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+      <!-- hamburger -->
+      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- mobile dropdown overlay -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Nuestra historia</a></li>
+          <li class="mobile-submenu">
+            <details>
+              <summary>Descubre</summary>
+              <ul>
+                <li><a href="products/platano.html">Plátano</a></li>
+                <li><a href="products/chips.html">Chips</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="operaciones.html">Operaciones</a></li>
+          <li><a href="financiero.html">Financiero</a></li>
+          <li><a href="rsc.html">RSC</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" 
+    data-aos="fade-down" 
+    data-aos-duration="1200"
+    style="background: url('assets/images/Responsabilidad Social Corporativa/3.jpg') no-repeat center center; 
+          background-size: cover; 
+          position: relative; 
+          padding: 120px 20px; 
+          text-align: center; 
+          color: #fff;">
+
+    <div class="hero-overlay" style="position: relative; z-index: 2;">
+      <h1 class="hero-title">Responsabilidad Social Corporativa</h1>
+      <p class="hero-tagline">
+        Comprometidos con el bienestar social y ambiental en cada paso de nuestra producción
+      </p>
+    </div>
+
+    <!-- Overlay oscuro para contraste -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                background: rgba(0,0,0,0.4); z-index: 1;"></div>
+  </section>
+
+  <!-- PLAN SOCIAL EXTERNO -->
+  <section class="max-w-4xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container" style="padding: 0 1rem;">
+      <h1>‎</h1>
+      <h1 data-aos="fade-down" data-aos-duration="900">PLAN SOCIAL EXTERNO</h1>
+      <p data-aos="fade-up" data-aos-duration="900" class="mb-4">
+        En Platanera Oro Verde buscamos ser socialmente responsable en cada proceso de 
+        toma de decisiones y de valorar el impacto de las acciones en las comunidades (de 
+        acuerdo con líneas de acción estratégicas de la OPE), Se quiere un proceso de 
+        impacto social, no acciones puntuales y aisladas. Por esto se requiere que lo que se 
+        emprenda sea con grupos previamente organizados (ONGs, municipalidades, 
+        asociaciones para el desarrollo comunal, comités de desarrollo, u otros). En previas 
+        conversaciones con proyectos empresariales pasados logramos obtener el contacto 
+        de la Lcda. Tatiana Angulo. Administradora de ASADA, La Alegría. Nos comentó que 
+        las familias de la zona no se concientizaban en el uso del agua y además buscan 
+        visibilizarse en la zona mediante publicidad en redes sociales.
+      </p>
+      
+    </div>
+  </section>
+
+  <!-- JUSTIFICACIÓN DE LA ACTIVIDAD -->
+  <section class="partners container" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
+    <h1>‎</h1>
+    <h2 data-aos="fade-down" data-aos-duration="900">JUSTIFICACIÓN DE LA ACTIVIDAD</h2>
+    <p data-aos="fade-up" data-aos-duration="900">
+      En Platanera Oro Verde a partir del análisis de necesidades se profundizo y tras un 
+      profundo análisis e intercambio de ideas entre los socios de la empresa, se decidió 
+      que se realizará esta charla para que la comunidad tome conciencia sobre el buen 
+      uso y ahorro de agua en el hogar y en la colectividad, abordando actividades 
+      sugeridas por la administradora como: 
+      
+      “Educación y concienciación a la comunidad: Charlas para abonados y comunidad.”
+    </p>
+    <div class="partner-list">
+      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <img src="assets/images/Responsabilidad Social Corporativa/1.JPG" alt="Programa Educación">
+      </div>
+      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <img src="assets/images/Responsabilidad Social Corporativa/3.JPG" alt="Programa Educación">
+      </div>
+      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <img src="assets/images/Responsabilidad Social Corporativa/4.JPG" alt="Programa Educación">
+      </div>
+      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <img src="assets/images/Responsabilidad Social Corporativa/5.JPG" alt="Programa Educación">
+      </div>
+      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <img src="assets/images/Responsabilidad Social Corporativa/6.JPG" alt="Programa Educación">
+      </div>
+      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <img src="assets/images/Responsabilidad Social Corporativa/7.JPG" alt="Programa Educación">
+      </div>
+      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+        <img src="assets/images/Responsabilidad Social Corporativa/8.JPG" alt="Programa Educación">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / INVOLÚCRATE -->
+  <section class="container" data-aos="fade-up" data-aos-duration="1200" style="text-align:center; padding:3rem 1rem;">
+    <h2>Involúcrate</h2>
+    <p>Únete a nuestras iniciativas y marca la diferencia con nosotros.</p>
+    <a href="https://www.instagram.com/plataneraoroverde" class="nav-links contact-link" style="margin-top:1rem; display:inline-block;" target="_blank" rel="noopener noreferrer">Contáctanos</a>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img class="footer-logo" src="assets/images/header-side.png" alt="Logo" />
+        <div class="socials">
+          <a href="https://www.facebook.com/" aria-label="Facebook" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/facebook.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/plataneraoroverde" aria-label="Instagram" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://wa.me/593987407971" aria-label="WhatsApp" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
+          </a>
+        </div>
+        <address class="contact-details">
+          <p>Platanera Oro Verde</p>
+          <p>Costa Rica — EARTH University</p>
+          <p>Correo: info@plataneraoroverde.cr</p>
+        </address>
+      </div>
+
+      <div class="footer-right">
+        <h4>Contacto</h4>
+        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
+          <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" /></label>
+          <label><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" /></label>
+          <label><span>Mensaje</span><textarea name="message" placeholder="Escribe tu mensaje"></textarea></label>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="site-credit container">
+      <p>© <span id="year"></span> Platanera Oro Verde — Fundador: Mateo Blacio</p>
+    </div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      easing: 'ease-in-out',
+      duration: 800,
+    });
+  </script>
+</body>
+</html>

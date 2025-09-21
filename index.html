@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Platanera Oro Verde — Inicio</title>
+
+  <!-- AOS (Animate On Scroll) CDN -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico">
+</head>
+<body class="page home">
+  <!-- HEADER (común a todas las páginas) -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Platanera Oro Verde — Inicio">
+        <img src="assets/images/header-side.png" alt="Logo Platanera Oro Verde" />
+      </a>
+
+      <!-- nav: enlaces organizados a la derecha; solo 'Descubre' conserva un dropdown -->
+    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
+        <ul>
+            <li><a href="historia.html">Nuestra historia</a></li>
+
+            <!-- Descubre: dropdown sólo aquí -->
+            <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">Descubre ▾</button>
+            <ul class="dropdown" aria-label="submenu descubre">
+                <li><a href="products/platano.html">Plátano</a></li>
+                <li><a href="products/chips.html">Chips</a></li>
+            </ul>
+            </li>
+
+            <li><a href="operaciones.html">Operaciones</a></li>
+            <li><a href="rsc.html">RSC</a></li>
+            <li><a href="financiero.html">Financiero</a></li>
+
+            <!-- siempre visible en landing (por CSS .page.home) -->
+            <li><a class="contact-link" href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+      <!-- hamburger -->
+      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- mobile dropdown overlay -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Nuestra historia</a></li>
+          <li class="mobile-submenu">
+            <details>
+              <summary>Descubre</summary>
+              <ul>
+                <li><a href="products/platano.html">Plátano</a></li>
+                <li><a href="products/chips.html">Chips</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="operaciones.html">Operaciones</a></li>
+          <li><a href="financiero.html">Financiero</a></li>
+          <li><a href="rsc.html">RSC</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="mainContent" class="site-main">
+    <!-- HERO / Video placeholder + animated phrase -->
+    <section class="hero">
+      <div class="hero-media" data-aos="zoom-out" data-aos-duration="900">
+        <!-- Video de fondo -->
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="assets/images/presentation.mp4" type="video/mp4">
+          Tu navegador no soporta videos en HTML5.
+        </video>
+      </div>
+
+      <div class="hero-overlay">
+        <h1 class="hero-title" data-aos="fade-down" data-aos-delay="200">Platanera Oro Verde</h1>
+        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="400"><strong>“Comprometidos con la responsabilidad social y ambiental en cada paso”</strong></p>
+        <p></p>
+        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="400">Somos una empresa estudiantil que, además de producir y comercializar plátano earthiano</p>
+        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="400">gestionamos una cadena de valor completa a través de nuestra división de negocio.</p>
+      </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="mission-vision container">
+      <div class="card" data-aos="fade-right">
+        <h2>Misión</h2>
+        <p>
+          Satisfacer a nuestros clientes proveyendo fruta de alta calidad, 
+          producida de manera eficiente y sostenible, garantizando sanidad 
+          y mínimo impacto ambiental, a través de buenas prácticas agrícolas.
+        </p>
+      </div>
+      <div class="card" data-aos="fade-left">
+        <h2>Visión</h2>
+        <p>
+          Ser una empresa líder en la producción de plátano, 
+          reconocida por su compromiso con la calidad, la innovación 
+          y la sostenibilidad; proporcionando productos nutritivos, 
+          accesibles a estudiantes y funcionarios mientras contribuimos 
+          al bienestar de nuestra comunidad y al cuidado del medio ambiente.
+        </p>
+      </div>
+    </section>
+
+    <!-- VALORES -->
+    <section class="partners container" data-aos="fade-up">
+      <h2 class="text-3xl font-semibold text-green-dark text-center mb-8">Valores Corporativos</h2>
+      <h1>‎</h1>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        
+        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="800">
+          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Ética</h3>
+          <p class="text-green-dark text-center">Actuamos con integridad y transparencia en todas nuestras operaciones.</p>
+        </div>
+
+        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="1000">
+          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Moralidad</h3>
+          <p class="text-green-dark text-center">Respetamos las normas sociales, promoviendo conductas ejemplares.</p>
+        </div>
+        
+        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="1200">
+          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Respeto</h3>
+          <p class="text-green-dark text-center">Valoramos a las personas y el medio ambiente, creando un entorno inclusivo.</p>
+        </div>
+        
+        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="1000">
+          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Compromiso</h3>
+          <p class="text-green-dark text-center">Nos dedicamos a cumplir con nuestros objetivos de manera responsable.</p>
+        </div>
+
+        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="1000">
+          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Honestidad</h3>
+          <p class="text-green-dark text-center">Mantenemos la claridad y sinceridad en todas nuestras relaciones y procesos.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Partners / Cafetería (placeholder) -->
+    <!-- Partners / Cafetería -->
+    <section class="partners container" data-aos="fade-up">
+      <h3>Proveemos a</h3>
+      <h1></h1>
+      <div class="partner-list">
+        <div class="partner-item">
+          <img src="assets/images/earth-logo-alt.png" alt="Cafetería EARTH" />
+          <p><strong>Cafetería EARTH</strong></p>
+        </div>
+        <div class="partner-item"></div>
+        <div class="partner-item">
+          <img src="assets/images/aso-earth-logo.png" alt="ASOEARTH" />
+          <p><strong>ASOEARTH</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img class="footer-logo" src="assets/images/header-side.png" alt="Logo" />
+        <div class="socials">
+          <a href="https://www.facebook.com/" aria-label="Facebook" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/facebook.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/plataneraoroverde" aria-label="Instagram" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://wa.me/593987407971" aria-label="WhatsApp" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
+          </a>
+        </div>
+        <address class="contact-details">
+          <p>Platanera Oro Verde</p>
+          <p>Costa Rica — EARTH University</p>
+          <p>Correo: info@plataneraoroverde.cr</p>
+        </address>
+      </div>
+
+      <div class="footer-right">
+        <h4>Contacto</h4>
+        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
+          <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" /></label>
+          <label><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" /></label>
+          <label><span>Mensaje</span><textarea name="message" placeholder="Escribe tu mensaje"></textarea></label>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="site-credit container">
+      <p>© <span id="year"></span> Platanera Oro Verde — Fundador: 
+        <a href="https://youtube.com/shorts/ABFoJ6AMm5I?feature=shared" target="_blank" style="color: inherit; text-decoration: none; cursor: pointer;">
+          Mateo Blacio
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Platanera Oro Verde — Operaciones</title>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    /* Carrusel */
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 40px 0 20px;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+
+    .carousel-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+    .carousel-track img {
+      width: 100%;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    /* Galería */
+    .gallery-wrapper {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      background: white;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico">
+</head>
+<body class="page operaciones">
+
+  <!-- HEADER (común a todas las páginas) -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Platanera Oro Verde — Inicio">
+        <img src="assets/images/header-side.png" alt="Logo Platanera Oro Verde" />
+      </a>
+
+      <!-- nav: enlaces organizados a la derecha; solo 'Descubre' conserva un dropdown -->
+    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
+        <ul>
+            <li><a href="historia.html">Nuestra historia</a></li>
+
+            <!-- Descubre: dropdown sólo aquí -->
+            <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">Descubre ▾</button>
+            <ul class="dropdown" aria-label="submenu descubre">
+                <li><a href="products/platano.html">Plátano</a></li>
+                <li><a href="products/chips.html">Chips</a></li>
+            </ul>
+            </li>
+
+            <li><a href="operaciones.html">Operaciones</a></li>
+            <li><a href="rsc.html">RSC</a></li>
+            <li><a href="financiero.html">Financiero</a></li>
+
+            <!-- siempre visible en landing (por CSS .page.home) -->
+            <li><a class="contact-link" href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+      <!-- hamburger -->
+      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- mobile dropdown overlay -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Nuestra historia</a></li>
+          <li class="mobile-submenu">
+            <details>
+              <summary>Descubre</summary>
+              <ul>
+                <li><a href="products/platano.html">Plátano</a></li>
+                <li><a href="products/chips.html">Chips</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="operaciones.html">Operaciones</a></li>
+          <li><a href="financiero.html">Financiero</a></li>
+          <li><a href="rsc.html">RSC</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Título de operaciones -->
+    <h3 style="color: white;"></h3>
+    <div class="hero-overlay">
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200" style="color: green">Cadena de Valor</h1>
+    </div>
+    <!-- Carrusel -->
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="assets/images/Cadena de Valor/1.jpg" alt="Imagen 1">
+        <img src="assets/images/Cadena de Valor/2.jpg" alt="Imagen 2">
+        <img src="assets/images/Cadena de Valor/3.jpg" alt="Imagen 3">
+        <img src="assets/images/Cadena de Valor/4.jpg" alt="Imagen 4">
+        <img src="assets/images/Cadena de Valor/5.jpg" alt="Imagen 5">
+        <img src="assets/images/Cadena de Valor/6.jpg" alt="Imagen 6">
+      </div>
+    </div>
+
+    <!-- Título galería -->
+    <h2 class="section-title">Galería de Operaciones</h2>
+
+    <!-- Galería -->
+    <div class="gallery-wrapper">
+      <div class="gallery-grid">
+        <!-- Para añadir más fotos, copia un bloque gallery-item -->
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/1.jpg" alt="Imagen 1"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/7.jpg" alt="Imagen 7"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/10.jpg" alt="Imagen 10"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/16.jpg" alt="Imagen 16"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/19.jpg" alt="Imagen 19"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/22.jpg" alt="Imagen 22"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/25.jpg" alt="Imagen 25"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/28.jpg" alt="Imagen 28"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/34.jpg" alt="Imagen 34"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/37.jpg" alt="Imagen 37"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/40.jpg" alt="Imagen 40"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/43.jpg" alt="Imagen 43"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/46.jpg" alt="Imagen 46"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/49.jpg" alt="Imagen 49"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/52.jpg" alt="Imagen 52"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/55.jpg" alt="Imagen 55"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/58.jpg" alt="Imagen 58"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/61.jpg" alt="Imagen 61"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/64.jpg" alt="Imagen 64"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/67.jpg" alt="Imagen 67"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/70.jpg" alt="Imagen 70"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/73.jpg" alt="Imagen 73"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/79.jpg" alt="Imagen 79"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/82.jpg" alt="Imagen 82"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/85.jpg" alt="Imagen 85"></div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/88.jpg" alt="Imagen 88"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img class="footer-logo" src="assets/images/header-side.png" alt="Logo" />
+        <div class="socials">
+          <a href="https://www.facebook.com/" aria-label="Facebook" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/facebook.png" alt="Facebook" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/plataneraoroverde" aria-label="Instagram" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
+          </a>
+          <a href="https://wa.me/593987407971" aria-label="WhatsApp" class="social-btn" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
+          </a>
+        </div>
+        <address class="contact-details">
+          <p>Platanera Oro Verde</p>
+          <p>Costa Rica — EARTH University</p>
+          <p>Correo: info@plataneraoroverde.cr</p>
+        </address>
+      </div>
+
+      <div class="footer-right">
+        <h4>Contacto</h4>
+        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
+          <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" /></label>
+          <label><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" /></label>
+          <label><span>Mensaje</span><textarea name="message" placeholder="Escribe tu mensaje"></textarea></label>
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="site-credit container">
+      <p>© <span id="year"></span> Platanera Oro Verde — Fundador: Mateo Blacio</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    AOS.init();
+
+    // Carrusel automático
+    const track = document.getElementById('carouselTrack');
+    const slides = track.children;
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  </script>
+</body>
+</html>
