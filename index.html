@@ -1,222 +1,332 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Platanera Oro Verde — Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- AOS (Animate On Scroll) CDN -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Platanera Oro Verde — Plátano earthiano de Costa Rica</title>
+  <meta name="description" content="Empresa estudiantil de la Universidad EARTH: producimos y comercializamos plátano earthiano y chips gestionando una cadena de valor completa, con responsabilidad social y ambiental." />
+  <meta name="theme-color" content="#0E2B1A" />
+  <meta name="author" content="Platanera Oro Verde" />
 
-  <!-- Main stylesheet -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CR" />
+  <meta property="og:title" content="Platanera Oro Verde — Plátano earthiano de Costa Rica" />
+  <meta property="og:description" content="Empresa estudiantil de la Universidad EARTH: producimos y comercializamos plátano earthiano y chips gestionando una cadena de valor completa, con responsabilidad social y ambiental." />
+  <meta property="og:image" content="assets/opt/poster.webp" />
+  <meta property="og:site_name" content="Platanera Oro Verde" />
+
+  <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico">
 </head>
-<body class="page home">
-  <!-- HEADER (común a todas las páginas) -->
-  <header class="site-header" id="siteHeader" role="banner">
-    <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Platanera Oro Verde — Inicio">
-        <img src="assets/images/header-side.png" alt="Logo Platanera Oro Verde" />
+<body>
+  <!-- ====================== HEADER ====================== -->
+  <header class="header" id="header">
+    <div class="contenedor header__inner">
+      <a class="marca" href="index.html" aria-label="Platanera Oro Verde — inicio">
+        <img src="assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
       </a>
 
-      <!-- nav: enlaces organizados a la derecha; solo 'Descubre' conserva un dropdown -->
-    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
-        <ul>
-            <li><a href="historia.html">Nuestra historia</a></li>
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="historia.html">Nuestra historia</a>
+        <div class="desplegable">
+          <button type="button" aria-expanded="false" aria-haspopup="true">Descubre <span class="desplegable__flecha" aria-hidden="true">▾</span></button>
+          <div class="desplegable__panel">
+            <a href="products/platano.html">Plátano</a>
+            <a href="products/chips.html">Chips de plátano</a>
+          </div>
+        </div>
+        <a href="operaciones.html">Operaciones</a>
+        <a href="rsc.html">RSC</a>
+        <a href="financiero.html">Financiero</a>
+        <a class="nav__cta" href="#contacto">Contacto</a>
+      </nav>
 
-            <!-- Descubre: dropdown sólo aquí -->
-            <li class="has-dropdown">
-            <button class="dropdown-toggle" aria-expanded="false">Descubre ▾</button>
-            <ul class="dropdown" aria-label="submenu descubre">
-                <li><a href="products/platano.html">Plátano</a></li>
-                <li><a href="products/chips.html">Chips</a></li>
-            </ul>
-            </li>
-
-            <li><a href="operaciones.html">Operaciones</a></li>
-            <li><a href="rsc.html">RSC</a></li>
-            <li><a href="financiero.html">Financiero</a></li>
-
-            <!-- siempre visible en landing (por CSS .page.home) -->
-            <li><a class="contact-link" href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-
-
-      <!-- hamburger -->
-      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
       </button>
-    </div>
-
-    <!-- mobile dropdown overlay -->
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-inner">
-        <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="historia.html">Nuestra historia</a></li>
-          <li class="mobile-submenu">
-            <details>
-              <summary>Descubre</summary>
-              <ul>
-                <li><a href="products/platano.html">Plátano</a></li>
-                <li><a href="products/chips.html">Chips</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a href="operaciones.html">Operaciones</a></li>
-          <li><a href="financiero.html">Financiero</a></li>
-          <li><a href="rsc.html">RSC</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </div>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main id="mainContent" class="site-main">
-    <!-- HERO / Video placeholder + animated phrase -->
+  <main>
+    <!-- ====================== HERO (video) ====================== -->
     <section class="hero">
-      <div class="hero-media" data-aos="zoom-out" data-aos-duration="900">
-        <!-- Video de fondo -->
-        <video autoplay muted loop playsinline class="hero-video">
-          <source src="assets/images/presentation.mp4" type="video/mp4">
-          Tu navegador no soporta videos en HTML5.
+      <div class="hero__fondo">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/opt/poster.webp" aria-hidden="true">
+          <source src="assets/images/presentation.mp4" type="video/mp4" />
         </video>
       </div>
-
-      <div class="hero-overlay">
-        <h1 class="hero-title" data-aos="fade-down" data-aos-delay="200">Platanera Oro Verde</h1>
-        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="400"><strong>“Comprometidos con la responsabilidad social y ambiental en cada paso”</strong></p>
-        <p></p>
-        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="400">Somos una empresa estudiantil que, además de producir y comercializar plátano earthiano</p>
-        <p class="hero-tagline" data-aos="fade-up" data-aos-delay="400">gestionamos una cadena de valor completa a través de nuestra división de negocio.</p>
-      </div>
-    </section>
-
-    <!-- Misión y Visión -->
-    <section class="mission-vision container">
-      <div class="card" data-aos="fade-right">
-        <h2>Misión</h2>
-        <p>
-          Satisfacer a nuestros clientes proveyendo fruta de alta calidad, 
-          producida de manera eficiente y sostenible, garantizando sanidad 
-          y mínimo impacto ambiental, a través de buenas prácticas agrícolas.
+      <div class="hero__velo" aria-hidden="true"></div>
+      <div class="hero__contenido">
+        <p class="eyebrow eyebrow--luz" data-entrada>Universidad EARTH · Guácimo, Costa Rica</p>
+        <h1 class="hero__titulo" data-entrada="2">Plátano earthiano,<br /><em>cultivado con propósito</em>.</h1>
+        <p class="hero__bajada" data-entrada="3">
+          Comprometidos con la responsabilidad social y ambiental en cada paso. Somos una
+          empresa estudiantil que produce y comercializa plátano earthiano gestionando una
+          cadena de valor completa.
         </p>
+        <div class="hero__cta" data-entrada="3">
+          <a class="btn btn-oro btn-lg" href="historia.html">Conoce nuestra historia</a>
+          <a class="btn btn-borde--luz btn-lg" href="operaciones.html">Ver operaciones</a>
+        </div>
       </div>
-      <div class="card" data-aos="fade-left">
-        <h2>Visión</h2>
-        <p>
-          Ser una empresa líder en la producción de plátano, 
-          reconocida por su compromiso con la calidad, la innovación 
-          y la sostenibilidad; proporcionando productos nutritivos, 
-          accesibles a estudiantes y funcionarios mientras contribuimos 
-          al bienestar de nuestra comunidad y al cuidado del medio ambiente.
-        </p>
+      <span class="hero__cue" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m0 0-5-5m5 5 5-5"/></svg></span>
+    </section>
+
+    <!-- ====================== CIFRAS ====================== -->
+    <section class="franja-datos" aria-label="Cifras de la empresa">
+      <div class="contenedor franja-datos__grid">
+        <p><span class="dato__cifra num" data-contador="510" data-prefijo="+">+510</span><span class="dato__label">cajas vendidas</span></p>
+        <p><span class="dato__cifra num" data-contador="17865" data-prefijo="+">+17 865</span><span class="dato__label">unidades vendidas</span></p>
+        <p><span class="dato__cifra num" data-contador="7000">7 000</span><span class="dato__label">m² de área productiva</span></p>
+        <p><span class="dato__cifra num" data-contador="14">14</span><span class="dato__label">colaboradores activos</span></p>
       </div>
     </section>
 
-    <!-- VALORES -->
-    <section class="partners container" data-aos="fade-up">
-      <h2 class="text-3xl font-semibold text-green-dark text-center mb-8">Valores Corporativos</h2>
-      <h1>‎</h1>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        
-        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="800">
-          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Ética</h3>
-          <p class="text-green-dark text-center">Actuamos con integridad y transparencia en todas nuestras operaciones.</p>
+    <!-- ====================== QUIÉNES SOMOS ====================== -->
+    <section class="seccion">
+      <div class="contenedor split">
+        <div data-reveal="izq">
+          <p class="eyebrow">Quiénes somos</p>
+          <h2>Un equipo joven que transforma la finca en escuela</h2>
+          <p>
+            Nacimos en la Universidad EARTH como empresa estudiantil. Además de producir y
+            comercializar plátano earthiano, gestionamos una cadena de valor completa a
+            través de nuestra división de negocio: del campo al empaque, y del empaque a
+            productos con valor agregado.
+          </p>
+          <p>
+            Trabajamos para demostrar que la sostenibilidad se puede lograr y que la
+            industria se puede transformar.
+          </p>
+          <a class="btn btn-verde" href="historia.html">Nuestra historia <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
-
-        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="1000">
-          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Moralidad</h3>
-          <p class="text-green-dark text-center">Respetamos las normas sociales, promoviendo conductas ejemplares.</p>
+        <div class="split__media" data-reveal="der">
+          <img src="assets/opt/campo-32-lg.webp" alt="El equipo de Platanera Oro Verde en la plantación" loading="lazy" width="1600" height="1067" />
         </div>
-        
-        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="1200">
-          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Respeto</h3>
-          <p class="text-green-dark text-center">Valoramos a las personas y el medio ambiente, creando un entorno inclusivo.</p>
-        </div>
-        
-        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="1000">
-          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Compromiso</h3>
-          <p class="text-green-dark text-center">Nos dedicamos a cumplir con nuestros objetivos de manera responsable.</p>
-        </div>
-
-        <div class="bg-f7f7f2 p-6 rounded-lg shadow-md" data-aos="zoom-in" data-aos-duration="1000">
-          <h3 class="text-xl font-bold text-green-dark mb-2 text-center">Honestidad</h3>
-          <p class="text-green-dark text-center">Mantenemos la claridad y sinceridad en todas nuestras relaciones y procesos.</p>
-        </div>
-
       </div>
     </section>
 
-    <!-- Partners / Cafetería (placeholder) -->
-    <!-- Partners / Cafetería -->
-    <section class="partners container" data-aos="fade-up">
-      <h3>Proveemos a</h3>
-      <h1></h1>
-      <div class="partner-list">
-        <div class="partner-item">
-          <img src="assets/images/earth-logo-alt.png" alt="Cafetería EARTH" />
-          <p><strong>Cafetería EARTH</strong></p>
+    <!-- ====================== MISIÓN / VISIÓN ====================== -->
+    <section class="seccion seccion--suave">
+      <div class="contenedor">
+        <div class="dos-col" data-reveal-grupo>
+          <article class="card proposito">
+            <h3>Misión</h3>
+            <p>
+              Satisfacer a nuestros clientes proveyendo fruta de alta calidad, producida de
+              manera eficiente y sostenible, garantizando sanidad y mínimo impacto
+              ambiental, a través de buenas prácticas agrícolas.
+            </p>
+          </article>
+          <article class="card proposito">
+            <h3>Visión</h3>
+            <p>
+              Ser una empresa líder en la producción de plátano, reconocida por su
+              compromiso con la calidad, la innovación y la sostenibilidad; proporcionando
+              productos nutritivos, accesibles a estudiantes y funcionarios mientras
+              contribuimos al bienestar de nuestra comunidad y al cuidado del medio
+              ambiente.
+            </p>
+          </article>
         </div>
-        <div class="partner-item"></div>
-        <div class="partner-item">
-          <img src="assets/images/aso-earth-logo.png" alt="ASOEARTH" />
-          <p><strong>ASOEARTH</strong></p>
+      </div>
+    </section>
+
+    <!-- ====================== VALORES ====================== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__head seccion__head--centro" data-reveal>
+          <p class="eyebrow">Valores corporativos</p>
+          <h2 class="seccion__titulo">Lo que guía cada decisión</h2>
         </div>
+        <div class="valores" data-reveal-grupo>
+          <article class="card valor">
+            <div class="valor__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M5 7l-2 5a3 3 0 0 0 6 0L7 7M19 7l-2 5a3 3 0 0 0 6 0l-2-5M4 21h16M8 7h8"/></svg></div>
+            <h3>Ética</h3>
+            <p>Actuamos con integridad y transparencia en todas nuestras operaciones.</p>
+          </article>
+          <article class="card valor">
+            <div class="valor__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21C7 17 3 13.5 3 9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 9 2.5c0 4-4 7.5-9 11.5Z"/></svg></div>
+            <h3>Moralidad</h3>
+            <p>Respetamos las normas sociales, promoviendo conductas ejemplares.</p>
+          </article>
+          <article class="card valor">
+            <div class="valor__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5 9a5 5 0 0 1 10 0M16 8a3 3 0 1 1 2.9 3.8M15.5 20a5 5 0 0 1 5.5-4.5"/></svg></div>
+            <h3>Respeto</h3>
+            <p>Valoramos a las personas y el medio ambiente, creando un entorno inclusivo.</p>
+          </article>
+          <article class="card valor">
+            <div class="valor__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m5 12 4 4L19 6M5 18h14"/></svg></div>
+            <h3>Compromiso</h3>
+            <p>Nos dedicamos a cumplir con nuestros objetivos de manera responsable.</p>
+          </article>
+          <article class="card valor">
+            <div class="valor__ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 3 4 6v6c0 4.5 3.2 8.3 8 9 4.8-.7 8-4.5 8-9V6l-8-3Zm-3.5 9 2.5 2.5L15.5 9"/></svg></div>
+            <h3>Honestidad</h3>
+            <p>Mantenemos la claridad y sinceridad en todas nuestras relaciones y procesos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CADENA DE VALOR ====================== -->
+    <section class="seccion seccion--suave">
+      <div class="contenedor">
+        <div class="seccion__head" data-reveal>
+          <p class="eyebrow">Cadena de valor</p>
+          <h2 class="seccion__titulo">Del campo a la comunidad, sin soltar el proceso</h2>
+          <p class="seccion__bajada">Cinco eslabones que gestionamos nosotros mismos.</p>
+        </div>
+        <div class="cadena" data-reveal-grupo>
+          <article class="card cadena__paso">
+            <img src="assets/opt/cv-2.webp" alt="Producimos — cadena de valor" loading="lazy" width="1400" height="787" />
+            <div class="cadena__cuerpo"><h3>Producimos</h3></div>
+          </article>
+          <article class="card cadena__paso">
+            <img src="assets/opt/cv-3.webp" alt="Protegemos — cadena de valor" loading="lazy" width="1400" height="787" />
+            <div class="cadena__cuerpo"><h3>Protegemos</h3></div>
+          </article>
+          <article class="card cadena__paso">
+            <img src="assets/opt/cv-4.webp" alt="Empacamos — cadena de valor" loading="lazy" width="1400" height="787" />
+            <div class="cadena__cuerpo"><h3>Empacamos</h3></div>
+          </article>
+          <article class="card cadena__paso">
+            <img src="assets/opt/cv-5.webp" alt="Transformamos — cadena de valor" loading="lazy" width="1400" height="787" />
+            <div class="cadena__cuerpo"><h3>Transformamos</h3></div>
+          </article>
+          <article class="card cadena__paso">
+            <img src="assets/opt/cv-6.webp" alt="Comercializamos — cadena de valor" loading="lazy" width="1400" height="787" />
+            <div class="cadena__cuerpo"><h3>Comercializamos</h3></div>
+          </article>
+        </div>
+        <div class="seccion__cta" data-reveal>
+          <a class="btn btn-verde btn-lg" href="operaciones.html">Ver operaciones y galería</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== PRODUCTOS ====================== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__head" data-reveal>
+          <p class="eyebrow">Descubre</p>
+          <h2 class="seccion__titulo">Nuestros productos</h2>
+        </div>
+        <div class="dos-col" data-reveal-grupo>
+          <a class="card cadena__paso" href="products/platano.html" style="counter-reset:none">
+            <img src="assets/opt/producto-platano-sm.webp" alt="Racimo de plátano earthiano" loading="lazy" width="640" height="427" />
+            <div class="cadena__cuerpo">
+              <h3 style="font-size:1.2rem">Plátano earthiano</h3>
+              <p style="color:var(--tinta-suave);margin-top:.3rem">Fresco, trazable y producido con prácticas sostenibles en el campus Guácimo.</p>
+            </div>
+          </a>
+          <a class="card cadena__paso" href="products/chips.html" style="counter-reset:none">
+            <img src="assets/opt/chips-1-sm.webp" alt="Bolsas de chips de plátano Oro Verde" loading="lazy" width="640" height="427" />
+            <div class="cadena__cuerpo">
+              <h3 style="font-size:1.2rem">Chips de plátano</h3>
+              <p style="color:var(--tinta-suave);margin-top:.3rem">Crujientes, hechos 100 % con nuestros plátanos: valor agregado con menos desperdicio.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== MARQUESINA DE FOTOS ====================== -->
+    <section class="seccion seccion--suave" style="padding-block:3rem" aria-label="Galería breve">
+      <div class="marquesina" data-reveal>
+        <div class="marquesina__pista"><img src="assets/opt/campo-7-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-17-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-22-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-25-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-36-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-45-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-48-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-51-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-73-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-87-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-7-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-17-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-22-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-25-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-36-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-45-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-48-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-51-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-73-sm.webp" alt="" loading="lazy" width="640" height="427" /><img src="assets/opt/campo-87-sm.webp" alt="" loading="lazy" width="640" height="427" /></div>
+      </div>
+    </section>
+
+    <!-- ====================== ALIADOS ====================== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__head seccion__head--centro" data-reveal>
+          <p class="eyebrow">Proveemos a</p>
+          <h2 class="seccion__titulo">Quienes confían en nuestra fruta</h2>
+        </div>
+        <div class="aliados" data-reveal-grupo>
+          <div class="card aliado">
+            <img src="assets/opt/earth-logo.png" alt="Universidad EARTH" loading="lazy" width="300" height="263" />
+            <p>Cafetería EARTH</p>
+          </div>
+          <div class="card aliado">
+            <img src="assets/opt/aso-logo.png" alt="ASOEARTH" loading="lazy" width="300" height="300" />
+            <p>ASOEARTH</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CTA FINAL ====================== -->
+    <section class="cta-final">
+      <div class="contenedor" data-reveal>
+        <h2>¿Quieres nuestra fruta o nuestras chips?</h2>
+        <p>Escríbenos por WhatsApp y coordinamos tu pedido o una visita a la finca.</p>
+        <a class="btn btn-oro btn-lg" href="https://wa.me/593987407971" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg> Escríbenos por WhatsApp</a>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER / CONTACT -->
-  <footer class="site-footer" id="contact" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img class="footer-logo" src="assets/images/header-side.png" alt="Logo" />
-        <div class="socials">
-          <a href="https://www.facebook.com/" aria-label="Facebook" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/facebook.png" alt="Facebook" class="social-icon">
+  <!-- ====================== FOOTER / CONTACTO ====================== -->
+  <footer class="footer" id="contacto">
+    <div class="contenedor footer__inner">
+      <div>
+        <a class="footer__logo" href="index.html" aria-label="Platanera Oro Verde — inicio">
+          <img src="assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
+        </a>
+        <p class="footer__tag">Empresa estudiantil de la Universidad EARTH: producimos y comercializamos plátano earthiano gestionando la cadena de valor completa.</p>
+        <div class="redes">
+          <a class="red" href="https://www.instagram.com/plataneraoroverde" target="_blank" rel="noopener" aria-label="Instagram de Platanera Oro Verde">
+            <img src="assets/images/icons/instagram.png" alt="" width="20" height="20" />
           </a>
-          <a href="https://www.instagram.com/plataneraoroverde" aria-label="Instagram" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
+          <a class="red" href="https://wa.me/593987407971" target="_blank" rel="noopener" aria-label="WhatsApp de Platanera Oro Verde">
+            <img src="assets/images/icons/whatsapp.png" alt="" width="20" height="20" />
           </a>
-          <a href="https://wa.me/593987407971" aria-label="WhatsApp" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
-          </a>
+          <!-- PENDIENTE: URL real de la página de Facebook (el enlace genérico anterior no llevaba a ninguna parte) -->
         </div>
-        <address class="contact-details">
-          <p>Platanera Oro Verde</p>
-          <p>Costa Rica — EARTH University</p>
-          <p>Correo: info@plataneraoroverde.cr</p>
-        </address>
+        <p class="footer__dato" style="margin-top:1.1rem">Guácimo, Limón — Universidad EARTH, Costa Rica</p>
+        <p class="footer__dato"><a href="mailto:info@plataneraoroverde.cr" style="text-decoration:underline;text-underline-offset:3px">info@plataneraoroverde.cr</a></p>
       </div>
 
-      <div class="footer-right">
-        <h4>Contacto</h4>
-        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
-          <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" /></label>
-          <label><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" /></label>
-          <label><span>Mensaje</span><textarea name="message" placeholder="Escribe tu mensaje"></textarea></label>
-          <button type="submit" class="btn-primary">Enviar</button>
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Explora</h4>
+        <a href="historia.html">Nuestra historia</a>
+        <a href="products/platano.html">Plátano</a>
+        <a href="products/chips.html">Chips de plátano</a>
+        <a href="operaciones.html">Operaciones</a>
+        <a href="rsc.html">RSC</a>
+        <a href="financiero.html">Financiero</a>
+      </nav>
+
+      <div>
+        <h4>Escríbenos</h4>
+        <!-- La web es estática: el formulario abre WhatsApp con el mensaje ya escrito. -->
+        <form class="form" id="form-contacto" novalidate>
+          <label><span>Nombre</span><input type="text" name="nombre" autocomplete="name" required /></label>
+          <label><span>Correo (opcional)</span><input type="email" name="correo" autocomplete="email" /></label>
+          <label><span>Mensaje</span><textarea name="mensaje" required></textarea></label>
+          <div class="form__pie">
+            <button type="submit" class="btn btn-oro">Enviar por WhatsApp</button>
+            <p class="form__estado" role="status" aria-live="polite"></p>
+          </div>
         </form>
       </div>
     </div>
-
-    <div class="site-credit container">
-      <p>© <span id="year"></span> Platanera Oro Verde — Fundador: 
-        <a href="https://youtube.com/shorts/ABFoJ6AMm5I?feature=shared" target="_blank" style="color: inherit; text-decoration: none; cursor: pointer;">
-          Mateo Blacio
-        </a>
-      </p>
+    <div class="contenedor footer__bottom">
+      <p>© <span id="anio"></span> Platanera Oro Verde — Universidad EARTH.</p>
+      <p>Fundador: <a href="https://youtube.com/shorts/ABFoJ6AMm5I?feature=shared" target="_blank" rel="noopener">Mateo Blacio</a></p>
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

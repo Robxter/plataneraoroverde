@@ -1,243 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Platanera Oro Verde — Operaciones</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Operaciones — Platanera Oro Verde</title>
+  <meta name="description" content="Nuestra cadena de valor en acción: producción, protección, empaque, transformación y comercialización del plátano earthiano, con galería de la finca y la planta." />
+  <meta name="theme-color" content="#0E2B1A" />
+  <meta name="author" content="Platanera Oro Verde" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CR" />
+  <meta property="og:title" content="Operaciones — Platanera Oro Verde" />
+  <meta property="og:description" content="Nuestra cadena de valor en acción: producción, protección, empaque, transformación y comercialización del plátano earthiano, con galería de la finca y la planta." />
+  <meta property="og:image" content="assets/opt/campo-48-lg.webp" />
+  <meta property="og:site_name" content="Platanera Oro Verde" />
+
+  <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <style>
-    /* Carrusel */
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin: 40px 0 20px;
-      font-weight: bold;
-      color: #1b5e20;
-    }
-
-    .carousel-container {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-    }
-    .carousel-track {
-      display: flex;
-      transition: transform 1s ease-in-out;
-    }
-    .carousel-track img {
-      width: 100%;
-      flex-shrink: 0;
-      object-fit: cover;
-    }
-
-    /* Galería */
-    .gallery-wrapper {
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .gallery-item {
-      background: white;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .gallery-item:hover {
-      transform: scale(1.05);
-    }
-  </style>
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico">
 </head>
-<body class="page operaciones">
-
-  <!-- HEADER (común a todas las páginas) -->
-  <header class="site-header" id="siteHeader" role="banner">
-    <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Platanera Oro Verde — Inicio">
-        <img src="assets/images/header-side.png" alt="Logo Platanera Oro Verde" />
+<body>
+  <!-- ====================== HEADER ====================== -->
+  <header class="header" id="header">
+    <div class="contenedor header__inner">
+      <a class="marca" href="index.html" aria-label="Platanera Oro Verde — inicio">
+        <img src="assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
       </a>
 
-      <!-- nav: enlaces organizados a la derecha; solo 'Descubre' conserva un dropdown -->
-    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
-        <ul>
-            <li><a href="historia.html">Nuestra historia</a></li>
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="historia.html">Nuestra historia</a>
+        <div class="desplegable">
+          <button type="button" aria-expanded="false" aria-haspopup="true">Descubre <span class="desplegable__flecha" aria-hidden="true">▾</span></button>
+          <div class="desplegable__panel">
+            <a href="products/platano.html">Plátano</a>
+            <a href="products/chips.html">Chips de plátano</a>
+          </div>
+        </div>
+        <a href="operaciones.html" aria-current="page">Operaciones</a>
+        <a href="rsc.html">RSC</a>
+        <a href="financiero.html">Financiero</a>
+        <a class="nav__cta" href="#contacto">Contacto</a>
+      </nav>
 
-            <!-- Descubre: dropdown sólo aquí -->
-            <li class="has-dropdown">
-            <button class="dropdown-toggle" aria-expanded="false">Descubre ▾</button>
-            <ul class="dropdown" aria-label="submenu descubre">
-                <li><a href="products/platano.html">Plátano</a></li>
-                <li><a href="products/chips.html">Chips</a></li>
-            </ul>
-            </li>
-
-            <li><a href="operaciones.html">Operaciones</a></li>
-            <li><a href="rsc.html">RSC</a></li>
-            <li><a href="financiero.html">Financiero</a></li>
-
-            <!-- siempre visible en landing (por CSS .page.home) -->
-            <li><a class="contact-link" href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-
-
-      <!-- hamburger -->
-      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
       </button>
     </div>
-
-    <!-- mobile dropdown overlay -->
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-inner">
-        <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="historia.html">Nuestra historia</a></li>
-          <li class="mobile-submenu">
-            <details>
-              <summary>Descubre</summary>
-              <ul>
-                <li><a href="products/platano.html">Plátano</a></li>
-                <li><a href="products/chips.html">Chips</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a href="operaciones.html">Operaciones</a></li>
-          <li><a href="financiero.html">Financiero</a></li>
-          <li><a href="rsc.html">RSC</a></li>
-        </ul>
-      </div>
-    </div>
   </header>
-
-  <!-- MAIN -->
   <main>
-
-    <!-- Título de operaciones -->
-    <h3 style="color: white;"></h3>
-    <div class="hero-overlay">
-      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200" style="color: green">Cadena de Valor</h1>
-    </div>
-    <!-- Carrusel -->
-    <div class="carousel-container">
-      <div class="carousel-track" id="carouselTrack">
-        <img src="assets/images/Cadena de Valor/1.jpg" alt="Imagen 1">
-        <img src="assets/images/Cadena de Valor/2.jpg" alt="Imagen 2">
-        <img src="assets/images/Cadena de Valor/3.jpg" alt="Imagen 3">
-        <img src="assets/images/Cadena de Valor/4.jpg" alt="Imagen 4">
-        <img src="assets/images/Cadena de Valor/5.jpg" alt="Imagen 5">
-        <img src="assets/images/Cadena de Valor/6.jpg" alt="Imagen 6">
+    <!-- ====================== HERO ====================== -->
+    <section class="hero hero--pagina">
+      <div class="hero__fondo"><img src="assets/opt/campo-48-lg.webp" alt="Plátano verde en la línea de empaque" width="1600" height="1067" fetchpriority="high" /></div>
+      <div class="hero__velo" aria-hidden="true"></div>
+      <div class="hero__contenido">
+        <nav class="migas" aria-label="Ruta de navegación" data-entrada>
+          <a href="index.html">Inicio</a><span aria-hidden="true">›</span><span aria-current="page">Operaciones</span>
+        </nav>
+        <h1 class="hero__titulo" data-entrada="2">Operaciones</h1>
+        <p class="hero__bajada" data-entrada="3">De la plantación al empaque: así gestionamos cada eslabón de la cadena de valor.</p>
       </div>
-    </div>
+    </section>
 
-    <!-- Título galería -->
-    <h2 class="section-title">Galería de Operaciones</h2>
-
-    <!-- Galería -->
-    <div class="gallery-wrapper">
-      <div class="gallery-grid">
-        <!-- Para añadir más fotos, copia un bloque gallery-item -->
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/1.jpg" alt="Imagen 1"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/7.jpg" alt="Imagen 7"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/10.jpg" alt="Imagen 10"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/16.jpg" alt="Imagen 16"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/19.jpg" alt="Imagen 19"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/22.jpg" alt="Imagen 22"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/25.jpg" alt="Imagen 25"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/28.jpg" alt="Imagen 28"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/34.jpg" alt="Imagen 34"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/37.jpg" alt="Imagen 37"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/40.jpg" alt="Imagen 40"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/43.jpg" alt="Imagen 43"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/46.jpg" alt="Imagen 46"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/49.jpg" alt="Imagen 49"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/52.jpg" alt="Imagen 52"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/55.jpg" alt="Imagen 55"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/58.jpg" alt="Imagen 58"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/61.jpg" alt="Imagen 61"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/64.jpg" alt="Imagen 64"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/67.jpg" alt="Imagen 67"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/70.jpg" alt="Imagen 70"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/73.jpg" alt="Imagen 73"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/79.jpg" alt="Imagen 79"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/82.jpg" alt="Imagen 82"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/85.jpg" alt="Imagen 85"></div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-duration="800"><img src="assets/images/session fotos campo/88.jpg" alt="Imagen 88"></div>
+    <!-- ====================== CADENA DE VALOR (carrusel) ====================== -->
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="seccion__head" data-reveal>
+          <p class="eyebrow">Cadena de valor</p>
+          <h2 class="seccion__titulo">Cinco eslabones, un mismo estándar</h2>
+          <p class="seccion__bajada">Producimos, protegemos, empacamos, transformamos y comercializamos.</p>
+        </div>
+        <div class="carrusel" data-reveal>
+          <div class="carrusel__pista" tabindex="0" aria-label="Láminas de la cadena de valor">
+          <figure class="carrusel__item"><img src="assets/opt/cv-1.webp" alt="Lámina 1 de la cadena de valor" loading="eager" width="1400" height="787" /></figure>
+          <figure class="carrusel__item"><img src="assets/opt/cv-2.webp" alt="Lámina 2 de la cadena de valor" loading="lazy" width="1400" height="787" /></figure>
+          <figure class="carrusel__item"><img src="assets/opt/cv-3.webp" alt="Lámina 3 de la cadena de valor" loading="lazy" width="1400" height="787" /></figure>
+          <figure class="carrusel__item"><img src="assets/opt/cv-4.webp" alt="Lámina 4 de la cadena de valor" loading="lazy" width="1400" height="787" /></figure>
+          <figure class="carrusel__item"><img src="assets/opt/cv-5.webp" alt="Lámina 5 de la cadena de valor" loading="lazy" width="1400" height="787" /></figure>
+          <figure class="carrusel__item"><img src="assets/opt/cv-6.webp" alt="Lámina 6 de la cadena de valor" loading="lazy" width="1400" height="787" /></figure>
+          </div>
+          <button class="carrusel__nav carrusel__nav--prev" type="button" aria-label="Lámina anterior">‹</button>
+          <button class="carrusel__nav carrusel__nav--next" type="button" aria-label="Lámina siguiente">›</button>
+          <div class="carrusel__puntos"></div>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <!-- ====================== GALERÍA ====================== -->
+    <section class="seccion seccion--suave">
+      <div class="contenedor">
+        <div class="seccion__head" data-reveal>
+          <p class="eyebrow">Galería</p>
+          <h2 class="seccion__titulo">La operación, en fotos</h2>
+          <p class="seccion__bajada">Haz clic en cualquier foto para verla en grande.</p>
+        </div>
+        <div data-reveal>
+      <div class="galeria" data-galeria="operaciones">
+        <a class="js-foto" href="assets/opt/campo-7-lg.webp" data-alt="Labores en la plantación"><img src="assets/opt/campo-7-sm.webp" alt="Labores en la plantación" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-9-lg.webp" data-alt="Camino entre los bloques de plátano"><img src="assets/opt/campo-9-sm.webp" alt="Camino entre los bloques de plátano" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-17-lg.webp" data-alt="Cuidado del racimo en campo"><img src="assets/opt/campo-17-sm.webp" alt="Cuidado del racimo en campo" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-19-lg.webp" data-alt="Colaborador junto a la planta de plátano"><img src="assets/opt/campo-19-sm.webp" alt="Colaborador junto a la planta de plátano" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-22-lg.webp" data-alt="Cosecha con bolsas de protección"><img src="assets/opt/campo-22-sm.webp" alt="Cosecha con bolsas de protección" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-24-lg.webp" data-alt="Traslado del racimo"><img src="assets/opt/campo-24-sm.webp" alt="Traslado del racimo" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-25-lg.webp" data-alt="Racimo de plátano verde recién cosechado"><img src="assets/opt/campo-25-sm.webp" alt="Racimo de plátano verde recién cosechado" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-27-lg.webp" data-alt="Plátano earthiano de primera calidad"><img src="assets/opt/campo-27-sm.webp" alt="Plátano earthiano de primera calidad" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-30-lg.webp" data-alt="Supervisión en campo"><img src="assets/opt/campo-30-sm.webp" alt="Supervisión en campo" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-36-lg.webp" data-alt="Recepción de fruta en la planta"><img src="assets/opt/campo-36-sm.webp" alt="Recepción de fruta en la planta" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-40-lg.webp" data-alt="Lavado y selección de la fruta"><img src="assets/opt/campo-40-sm.webp" alt="Lavado y selección de la fruta" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-41-lg.webp" data-alt="Control de calidad en el lavado"><img src="assets/opt/campo-41-sm.webp" alt="Control de calidad en el lavado" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-45-lg.webp" data-alt="Desinfección del producto"><img src="assets/opt/campo-45-sm.webp" alt="Desinfección del producto" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-49-lg.webp" data-alt="Plátano en la línea de empaque"><img src="assets/opt/campo-49-sm.webp" alt="Plátano en la línea de empaque" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-51-lg.webp" data-alt="Equipo en el laboratorio de empaque"><img src="assets/opt/campo-51-sm.webp" alt="Equipo en el laboratorio de empaque" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-57-lg.webp" data-alt="Preparación de cajas"><img src="assets/opt/campo-57-sm.webp" alt="Preparación de cajas" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-60-lg.webp" data-alt="Manejo de cajas para entrega"><img src="assets/opt/campo-60-sm.webp" alt="Manejo de cajas para entrega" loading="lazy" width="640" height="427" /></a>
+        <a class="js-foto" href="assets/opt/campo-64-lg.webp" data-alt="El equipo de la planta de empaque"><img src="assets/opt/campo-64-sm.webp" alt="El equipo de la planta de empaque" loading="lazy" width="640" height="427" /></a>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CTA ====================== -->
+    <section class="cta-final">
+      <div class="contenedor" data-reveal>
+        <h2>¿Quieres visitar la finca?</h2>
+        <p>Coordinamos visitas técnicas y pedidos por WhatsApp.</p>
+        <a class="btn btn-oro btn-lg" href="https://wa.me/593987407971" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg> Escríbenos</a>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER / CONTACT -->
-  <footer class="site-footer" id="contact" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img class="footer-logo" src="assets/images/header-side.png" alt="Logo" />
-        <div class="socials">
-          <a href="https://www.facebook.com/" aria-label="Facebook" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/facebook.png" alt="Facebook" class="social-icon">
+  <!-- ====================== FOOTER / CONTACTO ====================== -->
+  <footer class="footer" id="contacto">
+    <div class="contenedor footer__inner">
+      <div>
+        <a class="footer__logo" href="index.html" aria-label="Platanera Oro Verde — inicio">
+          <img src="assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
+        </a>
+        <p class="footer__tag">Empresa estudiantil de la Universidad EARTH: producimos y comercializamos plátano earthiano gestionando la cadena de valor completa.</p>
+        <div class="redes">
+          <a class="red" href="https://www.instagram.com/plataneraoroverde" target="_blank" rel="noopener" aria-label="Instagram de Platanera Oro Verde">
+            <img src="assets/images/icons/instagram.png" alt="" width="20" height="20" />
           </a>
-          <a href="https://www.instagram.com/plataneraoroverde" aria-label="Instagram" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
+          <a class="red" href="https://wa.me/593987407971" target="_blank" rel="noopener" aria-label="WhatsApp de Platanera Oro Verde">
+            <img src="assets/images/icons/whatsapp.png" alt="" width="20" height="20" />
           </a>
-          <a href="https://wa.me/593987407971" aria-label="WhatsApp" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
-          </a>
+          <!-- PENDIENTE: URL real de la página de Facebook (el enlace genérico anterior no llevaba a ninguna parte) -->
         </div>
-        <address class="contact-details">
-          <p>Platanera Oro Verde</p>
-          <p>Costa Rica — EARTH University</p>
-          <p>Correo: info@plataneraoroverde.cr</p>
-        </address>
+        <p class="footer__dato" style="margin-top:1.1rem">Guácimo, Limón — Universidad EARTH, Costa Rica</p>
+        <p class="footer__dato"><a href="mailto:info@plataneraoroverde.cr" style="text-decoration:underline;text-underline-offset:3px">info@plataneraoroverde.cr</a></p>
       </div>
 
-      <div class="footer-right">
-        <h4>Contacto</h4>
-        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
-          <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" /></label>
-          <label><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" /></label>
-          <label><span>Mensaje</span><textarea name="message" placeholder="Escribe tu mensaje"></textarea></label>
-          <button type="submit" class="btn-primary">Enviar</button>
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Explora</h4>
+        <a href="historia.html">Nuestra historia</a>
+        <a href="products/platano.html">Plátano</a>
+        <a href="products/chips.html">Chips de plátano</a>
+        <a href="operaciones.html">Operaciones</a>
+        <a href="rsc.html">RSC</a>
+        <a href="financiero.html">Financiero</a>
+      </nav>
+
+      <div>
+        <h4>Escríbenos</h4>
+        <!-- La web es estática: el formulario abre WhatsApp con el mensaje ya escrito. -->
+        <form class="form" id="form-contacto" novalidate>
+          <label><span>Nombre</span><input type="text" name="nombre" autocomplete="name" required /></label>
+          <label><span>Correo (opcional)</span><input type="email" name="correo" autocomplete="email" /></label>
+          <label><span>Mensaje</span><textarea name="mensaje" required></textarea></label>
+          <div class="form__pie">
+            <button type="submit" class="btn btn-oro">Enviar por WhatsApp</button>
+            <p class="form__estado" role="status" aria-live="polite"></p>
+          </div>
         </form>
       </div>
     </div>
-
-    <div class="site-credit container">
-      <p>© <span id="year"></span> Platanera Oro Verde — Fundador: Mateo Blacio</p>
+    <div class="contenedor footer__bottom">
+      <p>© <span id="anio"></span> Platanera Oro Verde — Universidad EARTH.</p>
+      <p>Fundador: <a href="https://youtube.com/shorts/ABFoJ6AMm5I?feature=shared" target="_blank" rel="noopener">Mateo Blacio</a></p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="assets/js/main.js"></script>
-
-  <script>
-    AOS.init();
-
-    // Carrusel automático
-    const track = document.getElementById('carouselTrack');
-    const slides = track.children;
-    let index = 0;
-
-    setInterval(() => {
-      index = (index + 1) % slides.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000);
-  </script>
 </body>
 </html>

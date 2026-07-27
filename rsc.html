@@ -1,218 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Platanera Oro Verde — Responsabilidad Social Corporativa</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- AOS (Animate On Scroll) CDN -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Responsabilidad Social Corporativa — Platanera Oro Verde</title>
+  <meta name="description" content="Nuestro plan social externo con la comunidad: educación y concienciación sobre el buen uso y ahorro del agua junto a la ASADA La Alegría." />
+  <meta name="theme-color" content="#0E2B1A" />
+  <meta name="author" content="Platanera Oro Verde" />
 
-  <!-- Main stylesheet -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CR" />
+  <meta property="og:title" content="Responsabilidad Social Corporativa — Platanera Oro Verde" />
+  <meta property="og:description" content="Nuestro plan social externo con la comunidad: educación y concienciación sobre el buen uso y ahorro del agua junto a la ASADA La Alegría." />
+  <meta property="og:image" content="assets/opt/rsc-1-lg.webp" />
+  <meta property="og:site_name" content="Platanera Oro Verde" />
+
+  <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico">
 </head>
 <body>
-
-  <!-- HEADER (común a todas las páginas) -->
-  <header class="site-header" id="siteHeader" role="banner">
-    <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Platanera Oro Verde — Inicio">
-        <img src="assets/images/header-side.png" alt="Logo Platanera Oro Verde" />
+  <!-- ====================== HEADER ====================== -->
+  <header class="header" id="header">
+    <div class="contenedor header__inner">
+      <a class="marca" href="index.html" aria-label="Platanera Oro Verde — inicio">
+        <img src="assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
       </a>
 
-      <!-- nav: enlaces organizados a la derecha; solo 'Descubre' conserva un dropdown -->
-    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
-        <ul>
-            <li><a href="historia.html">Nuestra historia</a></li>
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="historia.html">Nuestra historia</a>
+        <div class="desplegable">
+          <button type="button" aria-expanded="false" aria-haspopup="true">Descubre <span class="desplegable__flecha" aria-hidden="true">▾</span></button>
+          <div class="desplegable__panel">
+            <a href="products/platano.html">Plátano</a>
+            <a href="products/chips.html">Chips de plátano</a>
+          </div>
+        </div>
+        <a href="operaciones.html">Operaciones</a>
+        <a href="rsc.html" aria-current="page">RSC</a>
+        <a href="financiero.html">Financiero</a>
+        <a class="nav__cta" href="#contacto">Contacto</a>
+      </nav>
 
-            <!-- Descubre: dropdown sólo aquí -->
-            <li class="has-dropdown">
-            <a class="dropdown-toggle" aria-expanded="false">Descubre ▾</a>
-              <ul class="dropdown" aria-label="submenu descubre">
-                  <li><a href="products/platano.html">Plátano</a></li>
-                  <li><a href="products/chips.html">Chips</a></li>
-              </ul>
-            </li>
-
-            <li><a href="operaciones.html">Operaciones</a></li>
-            <li><a href="rsc.html">RSC</a></li>
-            <li><a href="financiero.html">Financiero</a></li>
-
-            <!-- siempre visible en landing (por CSS .page.home) -->
-            <li><a class="contact-link" href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-
-
-      <!-- hamburger -->
-      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
       </button>
     </div>
-
-    <!-- mobile dropdown overlay -->
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-inner">
-        <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="historia.html">Nuestra historia</a></li>
-          <li class="mobile-submenu">
-            <details>
-              <summary>Descubre</summary>
-              <ul>
-                <li><a href="products/platano.html">Plátano</a></li>
-                <li><a href="products/chips.html">Chips</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a href="operaciones.html">Operaciones</a></li>
-          <li><a href="financiero.html">Financiero</a></li>
-          <li><a href="rsc.html">RSC</a></li>
-        </ul>
-      </div>
-    </div>
   </header>
-
-  <!-- HERO -->
-  <section class="hero" 
-    data-aos="fade-down" 
-    data-aos-duration="1200"
-    style="background: url('assets/images/Responsabilidad Social Corporativa/3.jpg') no-repeat center center; 
-          background-size: cover; 
-          position: relative; 
-          padding: 120px 20px; 
-          text-align: center; 
-          color: #fff;">
-
-    <div class="hero-overlay" style="position: relative; z-index: 2;">
-      <h1 class="hero-title">Responsabilidad Social Corporativa</h1>
-      <p class="hero-tagline">
-        Comprometidos con el bienestar social y ambiental en cada paso de nuestra producción
-      </p>
-    </div>
-
-    <!-- Overlay oscuro para contraste -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-                background: rgba(0,0,0,0.4); z-index: 1;"></div>
-  </section>
-
-  <!-- PLAN SOCIAL EXTERNO -->
-  <section class="max-w-4xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container" style="padding: 0 1rem;">
-      <h1>‎</h1>
-      <h1 data-aos="fade-down" data-aos-duration="900">PLAN SOCIAL EXTERNO</h1>
-      <p data-aos="fade-up" data-aos-duration="900" class="mb-4">
-        En Platanera Oro Verde buscamos ser socialmente responsable en cada proceso de 
-        toma de decisiones y de valorar el impacto de las acciones en las comunidades (de 
-        acuerdo con líneas de acción estratégicas de la OPE), Se quiere un proceso de 
-        impacto social, no acciones puntuales y aisladas. Por esto se requiere que lo que se 
-        emprenda sea con grupos previamente organizados (ONGs, municipalidades, 
-        asociaciones para el desarrollo comunal, comités de desarrollo, u otros). En previas 
-        conversaciones con proyectos empresariales pasados logramos obtener el contacto 
-        de la Lcda. Tatiana Angulo. Administradora de ASADA, La Alegría. Nos comentó que 
-        las familias de la zona no se concientizaban en el uso del agua y además buscan 
-        visibilizarse en la zona mediante publicidad en redes sociales.
-      </p>
-      
-    </div>
-  </section>
-
-  <!-- JUSTIFICACIÓN DE LA ACTIVIDAD -->
-  <section class="partners container" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
-    <h1>‎</h1>
-    <h2 data-aos="fade-down" data-aos-duration="900">JUSTIFICACIÓN DE LA ACTIVIDAD</h2>
-    <p data-aos="fade-up" data-aos-duration="900">
-      En Platanera Oro Verde a partir del análisis de necesidades se profundizo y tras un 
-      profundo análisis e intercambio de ideas entre los socios de la empresa, se decidió 
-      que se realizará esta charla para que la comunidad tome conciencia sobre el buen 
-      uso y ahorro de agua en el hogar y en la colectividad, abordando actividades 
-      sugeridas por la administradora como: 
-      
-      “Educación y concienciación a la comunidad: Charlas para abonados y comunidad.”
-    </p>
-    <div class="partner-list">
-      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <img src="assets/images/Responsabilidad Social Corporativa/1.JPG" alt="Programa Educación">
+  <main>
+    <!-- ====================== HERO ====================== -->
+    <section class="hero hero--pagina">
+      <div class="hero__fondo"><img src="assets/opt/rsc-1-lg.webp" alt="Charla comunitaria de Platanera Oro Verde" width="1600" height="1067" fetchpriority="high" /></div>
+      <div class="hero__velo" aria-hidden="true"></div>
+      <div class="hero__contenido">
+        <nav class="migas" aria-label="Ruta de navegación" data-entrada>
+          <a href="index.html">Inicio</a><span aria-hidden="true">›</span><span aria-current="page">RSC</span>
+        </nav>
+        <h1 class="hero__titulo" data-entrada="2">Responsabilidad Social Corporativa</h1>
+        <p class="hero__bajada" data-entrada="3">Comprometidos con el bienestar social y ambiental en cada paso de nuestra producción.</p>
       </div>
-      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <img src="assets/images/Responsabilidad Social Corporativa/3.JPG" alt="Programa Educación">
-      </div>
-      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <img src="assets/images/Responsabilidad Social Corporativa/4.JPG" alt="Programa Educación">
-      </div>
-      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <img src="assets/images/Responsabilidad Social Corporativa/5.JPG" alt="Programa Educación">
-      </div>
-      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <img src="assets/images/Responsabilidad Social Corporativa/6.JPG" alt="Programa Educación">
-      </div>
-      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <img src="assets/images/Responsabilidad Social Corporativa/7.JPG" alt="Programa Educación">
-      </div>
-      <div class="partner-item" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
-        <img src="assets/images/Responsabilidad Social Corporativa/8.JPG" alt="Programa Educación">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA / INVOLÚCRATE -->
-  <section class="container" data-aos="fade-up" data-aos-duration="1200" style="text-align:center; padding:3rem 1rem;">
-    <h2>Involúcrate</h2>
-    <p>Únete a nuestras iniciativas y marca la diferencia con nosotros.</p>
-    <a href="https://www.instagram.com/plataneraoroverde" class="nav-links contact-link" style="margin-top:1rem; display:inline-block;" target="_blank" rel="noopener noreferrer">Contáctanos</a>
-  </section>
-
-  <!-- FOOTER / CONTACT -->
-  <footer class="site-footer" id="contact" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img class="footer-logo" src="assets/images/header-side.png" alt="Logo" />
-        <div class="socials">
-          <a href="https://www.facebook.com/" aria-label="Facebook" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/facebook.png" alt="Facebook" class="social-icon">
-          </a>
-          <a href="https://www.instagram.com/plataneraoroverde" aria-label="Instagram" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
-          </a>
-          <a href="https://wa.me/593987407971" aria-label="WhatsApp" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
-          </a>
+    <!-- ====================== PLAN SOCIAL EXTERNO ====================== -->
+    <section class="seccion">
+      <div class="contenedor split">
+        <div data-reveal="izq">
+          <p class="eyebrow">Plan social externo</p>
+          <h2>Impacto social, no acciones aisladas</h2>
+          <p>
+            En Platanera Oro Verde buscamos ser socialmente responsables en cada proceso de
+            toma de decisiones y valorar el impacto de las acciones en las comunidades, de
+            acuerdo con las líneas de acción estratégicas de la OPE. Queremos un proceso de
+            impacto social, no acciones puntuales y aisladas: por eso trabajamos con grupos
+            previamente organizados (ONG, municipalidades, asociaciones de desarrollo
+            comunal, comités y otros).
+          </p>
+          <p>
+            En conversaciones con proyectos empresariales anteriores obtuvimos el contacto
+            de la Lcda. Tatiana Angulo, administradora de la ASADA La Alegría, quien nos
+            comentó que las familias de la zona no se concientizaban en el uso del agua y
+            que además buscan visibilizarse mediante publicidad en redes sociales.
+          </p>
         </div>
-        <address class="contact-details">
-          <p>Platanera Oro Verde</p>
-          <p>Costa Rica — EARTH University</p>
-          <p>Correo: info@plataneraoroverde.cr</p>
-        </address>
+        <div class="split__media" data-reveal="der">
+          <img src="assets/opt/campo-84-lg.webp" alt="Colaborador de Platanera Oro Verde en el campo" loading="lazy" width="1600" height="1067" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== JUSTIFICACIÓN ====================== -->
+    <section class="seccion seccion--suave">
+      <div class="contenedor">
+        <div class="seccion__head" data-reveal>
+          <p class="eyebrow">La actividad</p>
+          <h2 class="seccion__titulo">Educación y concienciación sobre el agua</h2>
+          <p class="seccion__bajada">
+            Tras un profundo análisis de necesidades e intercambio de ideas entre los socios,
+            decidimos realizar una charla para que la comunidad tome conciencia sobre el buen
+            uso y ahorro del agua en el hogar y en la colectividad: “Educación y concienciación
+            a la comunidad: charlas para abonados y comunidad”.
+          </p>
+        </div>
+        <div data-reveal>
+          <div class="galeria" data-galeria="rsc" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
+            <a class="js-foto" href="assets/opt/rsc-1-lg.webp" data-alt="Charla comunitaria sobre el uso del agua"><img src="assets/opt/rsc-1-sm.webp" alt="Charla comunitaria sobre el uso del agua" loading="lazy" width="640" height="480" /></a>
+            <a class="js-foto" href="assets/opt/campo-87-lg.webp" data-alt="El equipo con la cosecha"><img src="assets/opt/campo-87-sm.webp" alt="El equipo con la cosecha" loading="lazy" width="640" height="427" /></a>
+            <a class="js-foto" href="assets/opt/campo-88-lg.webp" data-alt="El equipo de Platanera Oro Verde"><img src="assets/opt/campo-88-sm.webp" alt="El equipo de Platanera Oro Verde" loading="lazy" width="640" height="427" /></a>
+          </div>
+          <!-- PENDIENTE: faltan las fotos 3–8 de la actividad de RSC (la página anterior las
+               referenciaba pero nunca se subieron al repositorio). Al recibirlas, añadirlas
+               aquí como más <a class="js-foto"> con sus miniaturas. -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== INVOLÚCRATE ====================== -->
+    <section class="cta-final">
+      <div class="contenedor" data-reveal>
+        <h2>Involúcrate</h2>
+        <p>Únete a nuestras iniciativas y marca la diferencia con nosotros.</p>
+        <a class="btn btn-oro btn-lg" href="https://wa.me/593987407971" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg> Escríbenos</a>
+        <a class="btn btn-borde--luz btn-lg" href="https://www.instagram.com/plataneraoroverde" target="_blank" rel="noopener" style="margin-left:.6rem">Síguenos en Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER / CONTACTO ====================== -->
+  <footer class="footer" id="contacto">
+    <div class="contenedor footer__inner">
+      <div>
+        <a class="footer__logo" href="index.html" aria-label="Platanera Oro Verde — inicio">
+          <img src="assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
+        </a>
+        <p class="footer__tag">Empresa estudiantil de la Universidad EARTH: producimos y comercializamos plátano earthiano gestionando la cadena de valor completa.</p>
+        <div class="redes">
+          <a class="red" href="https://www.instagram.com/plataneraoroverde" target="_blank" rel="noopener" aria-label="Instagram de Platanera Oro Verde">
+            <img src="assets/images/icons/instagram.png" alt="" width="20" height="20" />
+          </a>
+          <a class="red" href="https://wa.me/593987407971" target="_blank" rel="noopener" aria-label="WhatsApp de Platanera Oro Verde">
+            <img src="assets/images/icons/whatsapp.png" alt="" width="20" height="20" />
+          </a>
+          <!-- PENDIENTE: URL real de la página de Facebook (el enlace genérico anterior no llevaba a ninguna parte) -->
+        </div>
+        <p class="footer__dato" style="margin-top:1.1rem">Guácimo, Limón — Universidad EARTH, Costa Rica</p>
+        <p class="footer__dato"><a href="mailto:info@plataneraoroverde.cr" style="text-decoration:underline;text-underline-offset:3px">info@plataneraoroverde.cr</a></p>
       </div>
 
-      <div class="footer-right">
-        <h4>Contacto</h4>
-        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
-          <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" /></label>
-          <label><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" /></label>
-          <label><span>Mensaje</span><textarea name="message" placeholder="Escribe tu mensaje"></textarea></label>
-          <button type="submit" class="btn-primary">Enviar</button>
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Explora</h4>
+        <a href="historia.html">Nuestra historia</a>
+        <a href="products/platano.html">Plátano</a>
+        <a href="products/chips.html">Chips de plátano</a>
+        <a href="operaciones.html">Operaciones</a>
+        <a href="rsc.html">RSC</a>
+        <a href="financiero.html">Financiero</a>
+      </nav>
+
+      <div>
+        <h4>Escríbenos</h4>
+        <!-- La web es estática: el formulario abre WhatsApp con el mensaje ya escrito. -->
+        <form class="form" id="form-contacto" novalidate>
+          <label><span>Nombre</span><input type="text" name="nombre" autocomplete="name" required /></label>
+          <label><span>Correo (opcional)</span><input type="email" name="correo" autocomplete="email" /></label>
+          <label><span>Mensaje</span><textarea name="mensaje" required></textarea></label>
+          <div class="form__pie">
+            <button type="submit" class="btn btn-oro">Enviar por WhatsApp</button>
+            <p class="form__estado" role="status" aria-live="polite"></p>
+          </div>
         </form>
       </div>
     </div>
-
-    <div class="site-credit container">
-      <p>© <span id="year"></span> Platanera Oro Verde — Fundador: Mateo Blacio</p>
+    <div class="contenedor footer__bottom">
+      <p>© <span id="anio"></span> Platanera Oro Verde — Universidad EARTH.</p>
+      <p>Fundador: <a href="https://youtube.com/shorts/ABFoJ6AMm5I?feature=shared" target="_blank" rel="noopener">Mateo Blacio</a></p>
     </div>
   </footer>
 
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    AOS.init({
-      once: true,
-      easing: 'ease-in-out',
-      duration: 800,
-    });
-  </script>
 </body>
 </html>

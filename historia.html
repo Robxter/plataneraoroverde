@@ -1,364 +1,272 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Platanera Oro Verde - Historia</title>
-  
-  <!-- AOS (Animate On Scroll) CDN -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- Main stylesheet -->
+  <title>Nuestra historia — Platanera Oro Verde</title>
+  <meta name="description" content="Cómo un equipo de estudiantes de la Universidad EARTH transformó la Finca Académica de Cultivos Tropicales en un modelo de emprendimiento agroempresarial sostenible." />
+  <meta name="theme-color" content="#0E2B1A" />
+  <meta name="author" content="Platanera Oro Verde" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CR" />
+  <meta property="og:title" content="Nuestra historia — Platanera Oro Verde" />
+  <meta property="og:description" content="Cómo un equipo de estudiantes de la Universidad EARTH transformó la Finca Académica de Cultivos Tropicales en un modelo de emprendimiento agroempresarial sostenible." />
+  <meta property="og:image" content="assets/opt/campo-3-lg.webp" />
+  <meta property="og:site_name" content="Platanera Oro Verde" />
+
+  <link rel="icon" href="assets/images/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/images/favicon/favicon.ico">
 </head>
 <body>
-
-  <!-- HEADER (común a todas las páginas) -->
-  <header class="site-header" id="siteHeader" role="banner">
-    <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Platanera Oro Verde — Inicio">
-        <img src="assets/images/header-side.png" alt="Logo Platanera Oro Verde" />
+  <!-- ====================== HEADER ====================== -->
+  <header class="header" id="header">
+    <div class="contenedor header__inner">
+      <a class="marca" href="index.html" aria-label="Platanera Oro Verde — inicio">
+        <img src="assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
       </a>
 
-      <!-- nav: enlaces organizados a la derecha; solo 'Descubre' conserva un dropdown -->
-    <nav class="nav-links" role="navigation" aria-label="Navegación principal">
-        <ul>
-            <li><a href="historia.html">Nuestra historia</a></li>
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="historia.html" aria-current="page">Nuestra historia</a>
+        <div class="desplegable">
+          <button type="button" aria-expanded="false" aria-haspopup="true">Descubre <span class="desplegable__flecha" aria-hidden="true">▾</span></button>
+          <div class="desplegable__panel">
+            <a href="products/platano.html">Plátano</a>
+            <a href="products/chips.html">Chips de plátano</a>
+          </div>
+        </div>
+        <a href="operaciones.html">Operaciones</a>
+        <a href="rsc.html">RSC</a>
+        <a href="financiero.html">Financiero</a>
+        <a class="nav__cta" href="#contacto">Contacto</a>
+      </nav>
 
-            <!-- Descubre: dropdown sólo aquí -->
-            <li class="has-dropdown">
-            <button class="dropdown-toggle" aria-expanded="false">Descubre ▾</button>
-            <ul class="dropdown" aria-label="submenu descubre">
-                <li><a href="products/platano.html">Plátano</a></li>
-                <li><a href="products/chips.html">Chips</a></li>
-            </ul>
-            </li>
-
-            <li><a href="operaciones.html">Operaciones</a></li>
-            <li><a href="rsc.html">RSC</a></li>
-            <li><a href="financiero.html">Financiero</a></li>
-
-            <!-- siempre visible en landing (por CSS .page.home) -->
-            <li><a class="contact-link" href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
-
-
-      <!-- hamburger -->
-      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
       </button>
     </div>
-
-    <!-- mobile dropdown overlay -->
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-inner">
-        <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="historia.html">Nuestra historia</a></li>
-          <li class="mobile-submenu">
-            <details>
-              <summary>Descubre</summary>
-              <ul>
-                <li><a href="products/platano.html">Plátano</a></li>
-                <li><a href="products/chips.html">Chips</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a href="operaciones.html">Operaciones</a></li>
-          <li><a href="financiero.html">Financiero</a></li>
-          <li><a href="rsc.html">RSC</a></li>
-        </ul>
-      </div>
-    </div>
   </header>
-
-  <!-- SECCIÓN HISTORIA -->
-  <main class="container mx-auto px-6 py-12">
-    <!-- TÍTULO PRINCIPAL -->
-    <section class="hero" 
-      data-aos="fade-down" 
-      data-aos-duration="1200"
-      style="background: url('assets/images/session fotos campo/3.jpg') no-repeat center center; 
-            background-size: cover; 
-            position: relative; 
-            padding: 120px 20px; 
-            text-align: center; 
-            color: #fff;">
-
-      <div class="hero-overlay" style="position: relative; z-index: 2;">
-        <h1 class="hero-title">Nuestra historia</h1>
-        <p class="hero-tagline"><strong>
-          "Somos un equipo joven, responsable y visionario, comprometido con el desarrollo sostenible."
-        </strong></p>
-        <h1></h1>
-        <p class="hero-tagline">
-          Desde la producción hasta la innovación.
-        </p>
-        <p class="hero-tagline">
-          Trabajamos juntos para hacer de Platanera Oro Verde un modelo de emprendimiento agroempresarial.
-        </p>
+  <main>
+    <!-- ====================== HERO ====================== -->
+    <section class="hero hero--pagina">
+      <div class="hero__fondo"><img src="assets/opt/campo-3-lg.webp" alt="El equipo de Platanera Oro Verde entre las plantas de plátano" width="1600" height="1067" fetchpriority="high" /></div>
+      <div class="hero__velo" aria-hidden="true"></div>
+      <div class="hero__contenido">
+        <nav class="migas" aria-label="Ruta de navegación" data-entrada>
+          <a href="index.html">Inicio</a><span aria-hidden="true">›</span><span aria-current="page">Nuestra historia</span>
+        </nav>
+        <h1 class="hero__titulo" data-entrada="2">Nuestra historia</h1>
+        <p class="hero__bajada" data-entrada="3">Somos un equipo joven, responsable y visionario, comprometido con el desarrollo sostenible. De la producción a la innovación.</p>
       </div>
     </section>
 
-    <!-- TEXTO HISTORIA -->
-    <section class="max-w-4xl mx-auto mb-16" data-aos="fade-up" data-aos-duration="1000">
-      
-      <h1>‎</h1>   
-      <h2>Historia de los plátanos</h2>
-      <h1>PLATANERA ORO VERDE</h1>
-      <p class="text-green-dark text-lg leading-relaxed mb-4">
-        A inicios de enero del 2025, PLATANERA ORO VERDE adquirió los terrenos de la Finca Académica de Cultivos Tropicales donde se encuentra el Campus Guácimo actualmente y ésta incluía bloques de producción de plátano con diferentes edades. 
-      </p>
-      <p class="text-green-dark text-lg leading-relaxed">
-        A pesar de varios retos que se encontraba enfrentando las parcelas en ese momento, se vio una oportunidad para servir de ejemplo para nuestros compañeros, y demostrarle a nuestra comunidad EARTH que la sostenibilidad se puede lograr y que la industria se podía transformar.
-      </p>
-
-      <h1>‎</h1>
-      <h2>Nuestro compromiso con la responsabilidad social</h2>
-      <p class="text-green-dark text-lg leading-relaxed mb-4">
-        En PLATANERA ORO VERDE se contrata a nuestros empleados de manera formal y remunerada, ofreciéndoles pagos justos, condiciones de trabajo seguras y oportunidades de desarrollo. Este compromiso con la responsabilidad social ha logrado que nuestros productos sean reconocidos dentro del campus logrando generar empleo directo para más de 20 estudiantes y funcionarios en EARTH.
-      </p>
-      <!--PENDIENTE-->
-      <!--!!!!!!!!!ADD IMAGES!!!!!!!!!-->
-      <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-      <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-
-      <h1>‎</h1>
-      <h2>Liderazgo Ambiental</h2>
-      <p class="text-green-dark text-lg leading-relaxed mb-4">
-        Los plátanos PLATANERA ORO VERDE son cultivados en nuestro campus Guácimo utilizando prácticas innovadoras y amigables con el ambiente para producir frutas saludables y de primera calidad. 
-      </p>
-      <h3>Algunas de nuestras prácticas incluyen:</h3>
-      <ul class="list-disc list-inside text-green-dark mb-4">
-        <li><strong>Protección de la biodiversidad: </strong>Nuestra área está dividida en bloques rodeados de árboles, con lo que se promueven los corredores biológicos, protegiendo la biodiversidad y los ecosistemas saludables.</li>
-        <li><strong>Ciclo completo para biomasa: </strong>Convertimos los residuos de la plantación se regresan a la tierra o se les encuentra una segunda vida (producción de bioinsumo). Los pseudotallos de la planta de plátano se procesa para regresar al suelo como abono y compost.</li>
-        <li><strong>No tenemos plásticos de un solo uso: </strong>Reciclamos las bolsas y cuerdas plásticas usadas en nuestros campos (mecate o piola bananera).</li>
-        <li><strong>Protección de la tierra y el agua: </strong>Utilizamos coberturas vegetales en la plantación y los sistemas de drenaje. Esta práctica contribuye a la salud del suelo, reduce la erosión y previene contaminación de aguas.</li>
-        <li><strong>Enfoque en la salud del suelo: </strong>Se aplica vinagre de plátano y compost para reducir la aplicación de herbicidas y fungicidas en las fincas.</li>
-      </ul>
-      <!--PENDIENTE-->
-      <!--!!!!!!!!!ADD IMAGES!!!!!!!!!-->
-      <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-      <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <!-- ====================== ORIGEN ====================== -->
+    <section class="seccion">
+      <div class="contenedor split">
+        <div data-reveal="izq">
+          <p class="eyebrow">El origen</p>
+          <h2>Enero de 2025: una finca con retos, una oportunidad</h2>
+          <p>
+            A inicios de enero del 2025, Platanera Oro Verde adquirió los terrenos de la
+            Finca Académica de Cultivos Tropicales, donde se encuentra el Campus Guácimo
+            actualmente, que incluía bloques de producción de plátano de diferentes edades.
+          </p>
+          <p>
+            A pesar de los retos que enfrentaban las parcelas en ese momento, vimos una
+            oportunidad para servir de ejemplo a nuestros compañeros y demostrarle a
+            nuestra comunidad EARTH que la sostenibilidad se puede lograr y que la
+            industria se puede transformar.
+          </p>
+        </div>
+        <div class="split__media" data-reveal="der">
+          <img src="assets/opt/campo-7-lg.webp" alt="Labores de campo en los bloques de plátano" loading="lazy" width="1600" height="1067" />
+        </div>
+      </div>
     </section>
 
-    <!-- NUESTRO EQUIPO -->
-    <section class="mb-16">
-      <h1>‎</h1>
-      <h2 class="text-3xl font-semibold text-green-dark text-center mb-12" data-aos="fade-down" data-aos-duration="1000">
-        Nuestro Equipo
-      </h2>
-
-      <div class="space-y-10 max-w-6xl mx-auto">
-        
-        <!-- Miembro 1 -->
-        <h1>‎</h1>
-        <div class="team-card" data-aos="fade-up" data-aos-duration="800">
-          <div class="flex items-center gap-8">
-            <img src="assets/images/session fotos campo/75.jpg" alt="Mateo Blacio" class="team-photo">
-            <div>
-              <h2>‎</h2>
-              <h3 class="text-2xl font-bold text-green-dark mb-4">Mateo Blacio</h3>
-
-              
-
-              <p class="text-green-dark leading-relaxed"><strong>Cargo - Presidente, Gerente General</strong></p>
-              <!-- Flag -->
-              <div class="flag-inline mb-2">
-                <span class="text-sm font-semibold text-green-dark">Ecuador - </span>
-                <img src="assets/images/flags/ecuador.png" alt="Ecuador">
-              </div>
-              <p class="text-green-dark leading-relaxed">
-                Fundador y motor de Platanera Oro Verde. Su pasión por la tierra y la comunidad
-                ha sido el pilar para construir una empresa comprometida con la calidad,
-                la sostenibilidad y el impacto positivo en la región.
-              </p>
-            </div>
-          </div>
+    <!-- ====================== RESPONSABILIDAD SOCIAL ====================== -->
+    <section class="seccion seccion--suave">
+      <div class="contenedor split split--invertido">
+        <div class="split__media" data-reveal="izq">
+          <img src="assets/opt/campo-62-lg.webp" alt="El equipo en la planta de empaque" loading="lazy" width="1600" height="1067" />
         </div>
-
-        <!-- Miembro 2 -->
-        <h1>‎</h1>
-        <div class="team-card" data-aos="fade-up" data-aos-duration="1000">
-          <div class="flex items-center gap-8">
-            <img src="assets/images/session fotos campo/19.jpg" alt="Miembro 2" class="team-photo">
-            <div>
-              <h2>‎</h2>
-              <h3 class="text-2xl font-bold text-green-dark mb-4">Aaron John</h3>
-
-              
-
-              <p class="text-green-dark leading-relaxed"><strong>Cargo - Vicepresidente, Gerente de Producción</strong></p>
-              <!-- Flag -->
-              <div class="flag-inline mb-2">
-                <span class="text-sm font-semibold text-green-dark">Las Bahamas - </span>
-                <img src="assets/images/flags/las_bahamas.png" alt="Las Bahamas">
-              </div>
-              <p class="text-green-dark leading-relaxed">
-                "La excelencia en la producción nace del respeto al campo y al esfuerzo de cada colaborador."
-              </p>
-            </div>
-          </div>
+        <div data-reveal="der">
+          <p class="eyebrow">Compromiso social</p>
+          <h2>Empleo formal, pagos justos, desarrollo</h2>
+          <p>
+            En Platanera Oro Verde contratamos a nuestros empleados de manera formal y
+            remunerada, ofreciéndoles pagos justos, condiciones de trabajo seguras y
+            oportunidades de desarrollo.
+          </p>
+          <p>
+            Este compromiso ha logrado que nuestros productos sean reconocidos dentro del
+            campus, generando empleo directo para más de 20 estudiantes y funcionarios en
+            EARTH.
+          </p>
         </div>
-
-        <!-- Miembro 3 -->
-        <h1>‎</h1>
-        <div class="team-card" data-aos="fade-up" data-aos-duration="1200">
-          <div class="flex items-center gap-8">
-            <img src="assets/images/session fotos campo/81.jpg" alt="Miembro 3" class="team-photo">
-            <div>
-              <h2>‎</h2>
-              <h3 class="text-2xl font-bold text-green-dark mb-4">Mosimiloluwa Dorcas</h3>
-              
-              
-
-              <p class="text-green-dark leading-relaxed"><strong>Cargo - Tesorera, Gerenta Financiera</strong></p>
-              <!-- Flag -->
-              <div class="flag-inline mb-2">
-                <span class="text-sm font-semibold text-green-dark">Nigeria - </span>
-                <img src="assets/images/flags/nigeria.png" alt="Nigeria">
-              </div>
-              <p class="text-green-dark leading-relaxed">
-                "La sostenibilidad de la empresa se asegura con decisiones financieras responsables y transparentes."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Miembro 4 -->
-        <h1>‎</h1>
-        <div class="team-card" data-aos="fade-up" data-aos-duration="1200">
-          <div class="flex items-center gap-8">
-            <img src="assets/images/session fotos campo/66.jpg" alt="Miembro 3" class="team-photo">
-            <div>
-              <h2>‎</h2>
-              <h3 class="text-2xl font-bold text-green-dark mb-4">Domenica Torreas</h3>
-              
-              
-
-              <p class="text-green-dark leading-relaxed"><strong>Cargo - Secretaria, Gerenta Social</strong></p>
-              <!-- Flag -->
-              <div class="flag-inline mb-2">
-                <span class="text-sm font-semibold text-green-dark">Ecuador - </span>
-                <img src="assets/images/flags/ecuador.png" alt="Ecuador">
-              </div>
-              <p class="text-green-dark leading-relaxed">
-                "El verdadero valor de nuestro trabajo está en el impacto positivo que generamos en la comunidad."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Miembro 5 -->
-        <h1>‎</h1>
-        <div class="team-card" data-aos="fade-up" data-aos-duration="1200">
-          <div class="flex items-center gap-8">
-            <img src="assets/images/session fotos campo/17.jpg" alt="Miembro 3" class="team-photo">
-            <div>
-              <h2>‎</h2>
-              <h3 class="text-2xl font-bold text-green-dark mb-4">Daudi Mwami</h3>
-              
-              
-
-              <p class="text-green-dark leading-relaxed"><strong>Cargo - Vocal 1, Gerente de Mercadeo</strong></p>
-              <!-- Flag -->
-              <div class="flag-inline mb-2">
-                <span class="text-sm font-semibold text-green-dark">Uganda - </span>
-                <img src="assets/images/flags/uganda.png" alt="Uganda">
-              </div>
-              <p class="text-green-dark leading-relaxed">
-                "Cada producto cuenta una historia; nuestra misión es llevarla al mundo con orgullo y autenticidad."
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Miembro 6 -->
-        <h1>‎</h1>
-        <div class="team-card" data-aos="fade-up" data-aos-duration="1200">
-          <div class="flex items-center gap-8">
-            <img src="assets/images/session fotos campo/78.jpg" alt="Miembro 3" class="team-photo">
-            <div>
-              <h2>‎</h2>
-              <h3 class="text-2xl font-bold text-green-dark mb-4">Erick Leonardo Sandí Hidalgo</h3>
-              
-              
-
-              <p class="text-green-dark leading-relaxed"><strong>Cargo - Vocal 2, Gerente Ambiental</strong></p>
-              <!-- Flag -->
-              <div class="flag-inline mb-2">
-                <span class="text-sm font-semibold text-green-dark">Costa Rica - </span>
-                <img src="assets/images/flags/costa_rica.png" alt="Costa Rica">
-              </div>
-              <p class="text-green-dark leading-relaxed">
-                "Proteger el ambiente no es una opción, es un compromiso con las futuras generaciones."
-              </p>
-            </div>
-          </div>
-        </div>
-
-    <!-- CONTACTO O CIERRE -->
-    <h1>‎</h1>
-    <section class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
-      <p class="text-green-dark text-lg">Estamos comprometidos a seguir creciendo y compartiendo nuestra pasión por la fruta con el mundo. ¡Gracias por confiar en Platanera Oro Verde!</p>
+      </div>
     </section>
 
+    <!-- ====================== LIDERAZGO AMBIENTAL ====================== -->
+    <section class="seccion">
+      <div class="contenedor split">
+        <div data-reveal="izq">
+          <p class="eyebrow">Liderazgo ambiental</p>
+          <h2>Prácticas que cuidan la fruta y la tierra</h2>
+          <p>
+            Los plátanos Oro Verde se cultivan en el campus Guácimo con prácticas
+            innovadoras y amigables con el ambiente para producir frutas saludables y de
+            primera calidad:
+          </p>
+          <ul class="lista-hoja">
+            <li><strong>Protección de la biodiversidad:</strong> bloques rodeados de árboles que promueven corredores biológicos y ecosistemas saludables.</li>
+            <li><strong>Ciclo completo para biomasa:</strong> los residuos vuelven a la tierra o encuentran una segunda vida; los pseudotallos se procesan como abono y compost.</li>
+            <li><strong>Cero plástico de un solo uso:</strong> reciclamos las bolsas y cuerdas plásticas del campo (mecate o piola bananera).</li>
+            <li><strong>Protección de tierra y agua:</strong> coberturas vegetales y sistemas de drenaje que reducen la erosión y previenen la contaminación.</li>
+            <li><strong>Salud del suelo:</strong> vinagre de plátano y compost para reducir herbicidas y fungicidas.</li>
+          </ul>
+        </div>
+        <div class="split__media" data-reveal="der">
+          <img src="assets/opt/campo-69-lg.webp" alt="Plantación de plátano del campus Guácimo" loading="lazy" width="1600" height="1067" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== EQUIPO ====================== -->
+    <section class="seccion seccion--suave">
+      <div class="contenedor">
+        <div class="seccion__head seccion__head--centro" data-reveal>
+          <p class="eyebrow">Nuestro equipo</p>
+          <h2 class="seccion__titulo">Seis países, un mismo propósito</h2>
+        </div>
+        <div class="equipo" data-reveal-grupo>
+          <article class="card persona">
+            <div class="persona__foto"><img src="assets/opt/campo-75-sm.webp" alt="Mateo Blacio" loading="lazy" width="640" height="427" /></div>
+            <div class="persona__cuerpo">
+              <span class="persona__cargo">Presidente · Gerente General</span>
+              <h3>Mateo Blacio</h3>
+              <span class="persona__pais"><img src="assets/images/flags/ecuador.png" alt="" width="24" height="16" />Ecuador</span>
+              <p class="persona__frase">Fundador y motor de Platanera Oro Verde. Su pasión por la tierra y la comunidad ha sido el pilar para construir una empresa comprometida con la calidad, la sostenibilidad y el impacto positivo en la región.</p>
+            </div>
+          </article>
+          <article class="card persona">
+            <div class="persona__foto"><img src="assets/opt/campo-19-sm.webp" alt="Aaron John" loading="lazy" width="640" height="427" /></div>
+            <div class="persona__cuerpo">
+              <span class="persona__cargo">Vicepresidente · Gerente de Producción</span>
+              <h3>Aaron John</h3>
+              <span class="persona__pais"><img src="assets/images/flags/las_bahamas.png" alt="" width="24" height="16" />Las Bahamas</span>
+              <p class="persona__frase">“La excelencia en la producción nace del respeto al campo y al esfuerzo de cada colaborador.”</p>
+            </div>
+          </article>
+          <article class="card persona">
+            <div class="persona__foto"><img src="assets/opt/campo-81-sm.webp" alt="Mosimiloluwa Dorcas" loading="lazy" width="640" height="427" /></div>
+            <div class="persona__cuerpo">
+              <span class="persona__cargo">Tesorera · Gerenta Financiera</span>
+              <h3>Mosimiloluwa Dorcas</h3>
+              <span class="persona__pais"><img src="assets/images/flags/nigeria.png" alt="" width="24" height="16" />Nigeria</span>
+              <p class="persona__frase">“La sostenibilidad de la empresa se asegura con decisiones financieras responsables y transparentes.”</p>
+            </div>
+          </article>
+          <article class="card persona">
+            <div class="persona__foto"><img src="assets/opt/campo-66-sm.webp" alt="Domenica Torreas" loading="lazy" width="640" height="427" /></div>
+            <div class="persona__cuerpo">
+              <span class="persona__cargo">Secretaria · Gerenta Social</span>
+              <h3>Domenica Torreas</h3>
+              <span class="persona__pais"><img src="assets/images/flags/ecuador.png" alt="" width="24" height="16" />Ecuador</span>
+              <p class="persona__frase">“El verdadero valor de nuestro trabajo está en el impacto positivo que generamos en la comunidad.”</p>
+            </div>
+          </article>
+          <article class="card persona">
+            <div class="persona__foto"><img src="assets/opt/campo-17-sm.webp" alt="Daudi Mwami" loading="lazy" width="640" height="427" /></div>
+            <div class="persona__cuerpo">
+              <span class="persona__cargo">Vocal 1 · Gerente de Mercadeo</span>
+              <h3>Daudi Mwami</h3>
+              <span class="persona__pais"><img src="assets/images/flags/uganda.png" alt="" width="24" height="16" />Uganda</span>
+              <p class="persona__frase">“Cada producto cuenta una historia; nuestra misión es llevarla al mundo con orgullo y autenticidad.”</p>
+            </div>
+          </article>
+          <article class="card persona">
+            <div class="persona__foto"><img src="assets/opt/campo-78-sm.webp" alt="Erick Leonardo Sandí Hidalgo" loading="lazy" width="640" height="427" /></div>
+            <div class="persona__cuerpo">
+              <span class="persona__cargo">Vocal 2 · Gerente Ambiental</span>
+              <h3>Erick Leonardo Sandí Hidalgo</h3>
+              <span class="persona__pais"><img src="assets/images/flags/costa_rica.png" alt="" width="24" height="16" />Costa Rica</span>
+              <p class="persona__frase">“Proteger el ambiente no es una opción, es un compromiso con las futuras generaciones.”</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CIERRE ====================== -->
+    <section class="cta-final">
+      <div class="contenedor" data-reveal>
+        <h2>Gracias por confiar en Platanera Oro Verde</h2>
+        <p>Estamos comprometidos a seguir creciendo y compartiendo nuestra pasión por la fruta con el mundo.</p>
+        <a class="btn btn-oro btn-lg" href="https://wa.me/593987407971" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg> Conversemos</a>
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER / CONTACT -->
-  <footer class="site-footer" id="contact" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img class="footer-logo" src="assets/images/header-side.png" alt="Logo" />
-        <div class="socials">
-          <a href="https://www.facebook.com/" aria-label="Facebook" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/facebook.png" alt="Facebook" class="social-icon">
+  <!-- ====================== FOOTER / CONTACTO ====================== -->
+  <footer class="footer" id="contacto">
+    <div class="contenedor footer__inner">
+      <div>
+        <a class="footer__logo" href="index.html" aria-label="Platanera Oro Verde — inicio">
+          <img src="assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
+        </a>
+        <p class="footer__tag">Empresa estudiantil de la Universidad EARTH: producimos y comercializamos plátano earthiano gestionando la cadena de valor completa.</p>
+        <div class="redes">
+          <a class="red" href="https://www.instagram.com/plataneraoroverde" target="_blank" rel="noopener" aria-label="Instagram de Platanera Oro Verde">
+            <img src="assets/images/icons/instagram.png" alt="" width="20" height="20" />
           </a>
-          <a href="https://www.instagram.com/plataneraoroverde" aria-label="Instagram" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
+          <a class="red" href="https://wa.me/593987407971" target="_blank" rel="noopener" aria-label="WhatsApp de Platanera Oro Verde">
+            <img src="assets/images/icons/whatsapp.png" alt="" width="20" height="20" />
           </a>
-          <a href="https://wa.me/593987407971" aria-label="WhatsApp" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="assets/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
-          </a>
+          <!-- PENDIENTE: URL real de la página de Facebook (el enlace genérico anterior no llevaba a ninguna parte) -->
         </div>
-        <address class="contact-details">
-          <p>Platanera Oro Verde</p>
-          <p>Costa Rica — EARTH University</p>
-          <p>Correo: info@plataneraoroverde.cr</p>
-        </address>
+        <p class="footer__dato" style="margin-top:1.1rem">Guácimo, Limón — Universidad EARTH, Costa Rica</p>
+        <p class="footer__dato"><a href="mailto:info@plataneraoroverde.cr" style="text-decoration:underline;text-underline-offset:3px">info@plataneraoroverde.cr</a></p>
       </div>
 
-      <div class="footer-right">
-        <h4>Contacto</h4>
-        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
-          <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" /></label>
-          <label><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" /></label>
-          <label><span>Mensaje</span><textarea name="message" placeholder="Escribe tu mensaje"></textarea></label>
-          <button type="submit" class="btn-primary">Enviar</button>
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Explora</h4>
+        <a href="historia.html">Nuestra historia</a>
+        <a href="products/platano.html">Plátano</a>
+        <a href="products/chips.html">Chips de plátano</a>
+        <a href="operaciones.html">Operaciones</a>
+        <a href="rsc.html">RSC</a>
+        <a href="financiero.html">Financiero</a>
+      </nav>
+
+      <div>
+        <h4>Escríbenos</h4>
+        <!-- La web es estática: el formulario abre WhatsApp con el mensaje ya escrito. -->
+        <form class="form" id="form-contacto" novalidate>
+          <label><span>Nombre</span><input type="text" name="nombre" autocomplete="name" required /></label>
+          <label><span>Correo (opcional)</span><input type="email" name="correo" autocomplete="email" /></label>
+          <label><span>Mensaje</span><textarea name="mensaje" required></textarea></label>
+          <div class="form__pie">
+            <button type="submit" class="btn btn-oro">Enviar por WhatsApp</button>
+            <p class="form__estado" role="status" aria-live="polite"></p>
+          </div>
         </form>
       </div>
     </div>
-
-    <div class="site-credit container">
-      <p>© <span id="year"></span> Platanera Oro Verde — Fundador: 
-        <a href="https://youtube.com/shorts/ABFoJ6AMm5I?feature=shared" target="_blank" style="color: inherit; text-decoration: none; cursor: pointer;">
-          Mateo Blacio
-        </a>
-      </p>
+    <div class="contenedor footer__bottom">
+      <p>© <span id="anio"></span> Platanera Oro Verde — Universidad EARTH.</p>
+      <p>Fundador: <a href="https://youtube.com/shorts/ABFoJ6AMm5I?feature=shared" target="_blank" rel="noopener">Mateo Blacio</a></p>
     </div>
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="assets/js/main.js"></script>
-
-  <script>
-    AOS.init({ once: true });
-  </script>
-
 </body>
 </html>

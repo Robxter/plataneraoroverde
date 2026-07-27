@@ -1,208 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Chips — Platanera Oro Verde</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Chips de plátano — Platanera Oro Verde</title>
+  <meta name="description" content="Chips crujientes hechos 100 % con nuestros plátanos: producto propio y natural, en bolsas de 50 g y 2 kg para cafeterías y puntos de venta." />
+  <meta name="theme-color" content="#0E2B1A" />
+  <meta name="author" content="Platanera Oro Verde" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CR" />
+  <meta property="og:title" content="Chips de plátano — Platanera Oro Verde" />
+  <meta property="og:description" content="Chips crujientes hechos 100 % con nuestros plátanos: producto propio y natural, en bolsas de 50 g y 2 kg para cafeterías y puntos de venta." />
+  <meta property="og:image" content="../assets/opt/chips-1-lg.webp" />
+  <meta property="og:site_name" content="Platanera Oro Verde" />
+
+  <link rel="icon" href="../assets/images/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="../assets/images/favicon/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="../assets/css/styles.css" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../assets/images/favicon/favicon.ico">
 </head>
-<body class="page product">
-
-  <!-- HEADER -->
-  <header class="site-header" id="siteHeader" role="banner">
-    <div class="container header-inner">
-      <a class="logo" href="../index.html" aria-label="Platanera Oro Verde — Inicio">
-        <img src="../assets/images/header-side.png" alt="Logo Platanera Oro Verde" />
+<body>
+  <!-- ====================== HEADER ====================== -->
+  <header class="header" id="header">
+    <div class="contenedor header__inner">
+      <a class="marca" href="../index.html" aria-label="Platanera Oro Verde — inicio">
+        <img src="../assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
       </a>
 
-      <nav class="nav-links" role="navigation" aria-label="Navegación principal">
-        <ul>
-          <li><a href="../historia.html">Nuestra historia</a></li>
-
-          <li class="has-dropdown">
-            <button class="dropdown-toggle" aria-expanded="false">Descubre ▾</button>
-            <ul class="dropdown" aria-label="submenu descubre">
-              <li><a href="platano.html">Plátano</a></li>
-              <li><a href="chips.html">Chips</a></li>
-            </ul>
-          </li>
-
-          <li><a href="../operaciones.html">Operaciones</a></li>
-          <li><a href="../rsc.html">RSC</a></li>
-          <li><a href="../financiero.html">Financiero</a></li>
-          <li><a class="contact-link" href="../#contact">Contacto</a></li>
-        </ul>
-      </nav>
-
-      <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-    </div>
-
-    <!-- mobile menu -->
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu-inner">
-        <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="../historia.html">Nuestra historia</a></li>
-          <li class="mobile-submenu">
-            <details>
-              <summary>Descubre</summary>
-              <ul>
-                <li><a href="platano.html">Plátano</a></li>
-                <li><a href="chips.html">Chips</a></li>
-              </ul>
-            </details>
-          </li>
-          <li><a href="../operaciones.html">Operaciones</a></li>
-          <li><a href="../rsc.html">RSC</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <!-- MAIN -->
-  <main class="container" id="mainContent">
-
-    <!-- Breadcrumb -->
-    <div style="margin:18px 0;font-size:14px;color:rgba(0,0,0,0.6)">
-      <a href="../index.html">Inicio</a> › <a href="chips.html" aria-current="page">Chips</a>
-    </div>
-
-    <!-- Hero product -->
-    <section class="product-hero" style="display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:32px;">
-      <div>
-        <div data-aos="fade-right">
-          <h1 style="font-size:2rem;margin:0 0 8px">Chips de Plátano — Platanera Oro Verde</h1>
-          <p style="margin:0 0 12px;color:rgba(0,0,0,0.75)">Chips crujientes hechos 100% con nuestros plátanos. Producto propio, natural y perfecto para snacks en la cafetería y venta en empaques.</p>
-        </div>
-
-        <div data-aos="fade-up" data-aos-delay="120" style="margin-top:18px">
-          <h3 style="margin-bottom:8px">Descripción</h3>
-          <p>Nuestras chips son procesadas en instalaciones controladas: corte, fritura (o horneado según lote), salado ligero y empaque al vacío. Ideal para consumo directo y ventas en puntos de venta.</p>
-
-          <ul style="margin-top:12px">
-            <li><strong>Presentación:</strong> Bolsa 50g / 2kg</li>
-            <li><strong>Ingredientes:</strong> Plátano 100%, aceite vegetal certificado, sal</li>
-            <li><strong>Conservación:</strong> empaque hermético, vida útil estimada 3 meses (según lote)</li>
-          </ul>
-
-          <div style="margin-top:16px">
-            <a class="btn-primary" href="https://wa.me/593987407971" target="_blank" style="display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;">Adquiérelos aquí</a>
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="../historia.html">Nuestra historia</a>
+        <div class="desplegable">
+          <button type="button" aria-expanded="false" aria-haspopup="true">Descubre <span class="desplegable__flecha" aria-hidden="true">▾</span></button>
+          <div class="desplegable__panel">
+            <a href="../products/platano.html">Plátano</a>
+            <a href="../products/chips.html" aria-current="page">Chips de plátano</a>
           </div>
         </div>
-      </div>
+        <a href="../operaciones.html">Operaciones</a>
+        <a href="../rsc.html">RSC</a>
+        <a href="../financiero.html">Financiero</a>
+        <a class="nav__cta" href="#contacto">Contacto</a>
+      </nav>
 
-      <aside data-aos="fade-left">
-        <div style="background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(29,107,58,0.06);padding:12px">
-          <img src="../assets/images/CHIPS/3.jpeg" alt="Chips — placeholder" style="width:100%;height:220px;object-fit:cover;border-radius:8px;margin-bottom:10px" />
-          <div style="font-size:14px;color:rgba(0,0,0,0.7)">Hecho con plátanos propios<br>Proveemos a: Cafetería EARTH</div>
-        </div>
-      </aside>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <!-- ====================== HERO ====================== -->
+    <section class="hero hero--pagina">
+      <div class="hero__fondo"><img src="../assets/opt/chips-2-lg.webp" alt="Bolsas de chips de plátano Oro Verde" width="1600" height="1067" fetchpriority="high" /></div>
+      <div class="hero__velo" aria-hidden="true"></div>
+      <div class="hero__contenido">
+        <nav class="migas" aria-label="Ruta de navegación" data-entrada>
+          <a href="../index.html">Inicio</a><span aria-hidden="true">›</span><span aria-current="page">Chips</span>
+        </nav>
+        <h1 class="hero__titulo" data-entrada="2">Chips de plátano</h1>
+        <p class="hero__bajada" data-entrada="3">Crujientes, hechos 100 % con nuestros plátanos. Valor agregado que reduce pérdidas postcosecha.</p>
+      </div>
     </section>
 
-    <!-- Nutrición / Ingredientes -->
-    <section class="specs" data-aos="fade-up">
-      <h2>Información nutricional</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:12px;">
-        <div class="card">
-          <h3>Ingredientes y proceso</h3>
-          <ul>
-            <li>Plátanos seleccionados</li>
-            <li>Corte uniforme y control térmico</li>
-            <li>Empaque y etiquetado con lote y fecha</li>
+    <!-- ====================== PRODUCTO ====================== -->
+    <section class="seccion">
+      <div class="contenedor producto">
+        <div data-reveal="izq">
+          <p class="eyebrow">El producto</p>
+          <h2>Del racimo a la bolsa, sin salir de la finca</h2>
+          <p style="color:var(--tinta-suave);margin-top:.6rem">
+            Nuestras chips se procesan en instalaciones controladas: corte uniforme,
+            fritura u horneado según lote, salado ligero y empaque hermético. Ideales para
+            consumo directo y venta en puntos de venta del campus.
+          </p>
+          <dl class="producto__specs">
+            <div class="spec"><dt>Presentación</dt><dd>Bolsa de 50 g · bolsa de 2 kg</dd></div>
+            <div class="spec"><dt>Ingredientes</dt><dd>Plátano 100 %, aceite vegetal certificado, sal</dd></div>
+            <div class="spec"><dt>Conservación</dt><dd>Empaque hermético; vida útil estimada de 3 meses según lote</dd></div>
+            <div class="spec"><dt>Etiquetado</dt><dd>Cada lote sale empacado y etiquetado con fecha</dd></div>
+          </dl>
+          <h3 style="font-size:1.1rem;margin-bottom:.6rem">Bueno saberlo</h3>
+          <ul class="lista-hoja">
+            <li>Plátanos seleccionados, corte uniforme y control térmico.</li>
+            <li>Sin gluten (a confirmar por lote de procesamiento).</li>
+            <li>Almacenar en lugar fresco y seco; consumir antes de la fecha indicada.</li>
           </ul>
+          <a class="btn btn-oro btn-lg" href="https://wa.me/593987407971" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg> Adquiérelos aquí</a>
         </div>
-        <div class="card">
-          <h3>Alérgenos y conservación</h3>
-          <ul>
-            <li>Sin gluten (a confirmar por lote de procesamiento)</li>
-            <li>Almacenar en lugar fresco y seco</li>
-            <li>Consumir preferiblemente antes de la fecha indicada</li>
-          </ul>
+        <div data-reveal="der">
+          <div class="split__media"><img src="../assets/opt/chips-3-lg.webp" alt="Bolsas de chips de plátano recién empacadas" width="1400" height="933" /></div>
+          <p style="color:var(--tinta-suave);font-size:.92rem;margin-top:.7rem;text-align:center">Hechas con plátanos propios · Proveemos a la Cafetería EARTH.</p>
         </div>
       </div>
     </section>
 
-    <!-- Galería -->
-    <section class="gallery" style="margin-top:28px" data-aos="fade-up">
-      <h2>Galería</h2>
-      <div style="display:flex;gap:12px;margin-top:12px;overflow:auto;padding-bottom:8px">
-        <img src="../assets/images/CHIPS/1.jpeg" alt="Chips 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/CHIPS/2.jpeg" alt="Chips 2" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/CHIPS/3.jpeg" alt="Chips 3" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/1.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/2.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/3.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/4.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/5.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/6.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/7.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/8.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/9.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/10.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/11.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
-        <img src="../assets/images/session Fotos en procesamiento CHIPS/12.jpeg" alt="Procesamiento 1" style="height:140px;border-radius:8px;object-fit:cover" />
+    <!-- ====================== GALERÍA ====================== -->
+    <section class="seccion seccion--suave">
+      <div class="contenedor">
+        <div class="seccion__head" data-reveal>
+          <p class="eyebrow">Galería</p>
+          <h2 class="seccion__titulo">Así se ven</h2>
+        </div>
+        <div class="galeria" data-galeria="chips" data-reveal style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
+          <a class="js-foto" href="../assets/opt/chips-1-lg.webp" data-alt="Bolsas de chips en caja"><img src="../assets/opt/chips-1-sm.webp" alt="Bolsas de chips en caja" loading="lazy" width="640" height="427" /></a>
+          <a class="js-foto" href="../assets/opt/chips-2-lg.webp" data-alt="Chips de plátano empacadas"><img src="../assets/opt/chips-2-sm.webp" alt="Chips de plátano empacadas" loading="lazy" width="640" height="427" /></a>
+          <a class="js-foto" href="../assets/opt/chips-3-lg.webp" data-alt="Detalle del empaque de chips"><img src="../assets/opt/chips-3-sm.webp" alt="Detalle del empaque de chips" loading="lazy" width="640" height="427" /></a>
+          <a class="js-foto" href="../assets/opt/cv-5.webp" data-alt="Transformamos: proceso de chips"><img src="../assets/opt/cv-5.webp" alt="Transformamos: proceso de elaboración de chips" loading="lazy" width="1400" height="787" /></a>
+        </div>
+        <!-- PENDIENTE: la carpeta "session Fotos en procesamiento CHIPS" que referenciaba la
+             página anterior nunca se subió al repositorio. Al recibir esas fotos, generar
+             derivados y añadirlas aquí. -->
       </div>
     </section>
 
-    <!-- CTA -->
-    <section style="margin-top:28px" data-aos="fade-up">
-      <div class="card">
-        <h3>¿Quieres vender nuestras chips?</h3>
-        <p>Ofrecemos condiciones especiales para cafeterías y puntos de venta en el campus. Escríbenos para solicitar una visita o muestra.</p>
-        <a class="btn-primary" href="https://wa.me/593987407971" target="_blank" style="display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;text-decoration:none;">Contactar</a>
+    <!-- ====================== CTA ====================== -->
+    <section class="cta-final">
+      <div class="contenedor" data-reveal>
+        <h2>¿Quieres vender nuestras chips?</h2>
+        <p>Condiciones especiales para cafeterías y puntos de venta del campus. Pide una muestra o una visita.</p>
+        <a class="btn btn-oro btn-lg" href="https://wa.me/593987407971" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.02ZM12.05 20.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.35c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg> Contactar</a>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer" id="contact" role="contentinfo">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img class="footer-logo" src="../assets/images/header-side.png" alt="Logo" />
-        <div class="socials">
-          <a href="https://www.facebook.com/" aria-label="Facebook" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="../assets/images/icons/facebook.png" alt="Facebook" class="social-icon">
+  <!-- ====================== FOOTER / CONTACTO ====================== -->
+  <footer class="footer" id="contacto">
+    <div class="contenedor footer__inner">
+      <div>
+        <a class="footer__logo" href="../index.html" aria-label="Platanera Oro Verde — inicio">
+          <img src="../assets/opt/logo-horizontal.png" alt="Platanera Oro Verde" width="466" height="160" />
+        </a>
+        <p class="footer__tag">Empresa estudiantil de la Universidad EARTH: producimos y comercializamos plátano earthiano gestionando la cadena de valor completa.</p>
+        <div class="redes">
+          <a class="red" href="https://www.instagram.com/plataneraoroverde" target="_blank" rel="noopener" aria-label="Instagram de Platanera Oro Verde">
+            <img src="../assets/images/icons/instagram.png" alt="" width="20" height="20" />
           </a>
-          <a href="https://www.instagram.com/plataneraoroverde" aria-label="Instagram" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="../assets/images/icons/instagram.png" alt="Instagram" class="social-icon">
+          <a class="red" href="https://wa.me/593987407971" target="_blank" rel="noopener" aria-label="WhatsApp de Platanera Oro Verde">
+            <img src="../assets/images/icons/whatsapp.png" alt="" width="20" height="20" />
           </a>
-          <a href="https://wa.me/593987407971" aria-label="WhatsApp" class="social-btn" target="_blank" rel="noopener noreferrer">
-            <img src="../assets/images/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
-          </a>
+          <!-- PENDIENTE: URL real de la página de Facebook (el enlace genérico anterior no llevaba a ninguna parte) -->
         </div>
-        <address class="contact-details">
-          <p>Platanera Oro Verde</p>
-          <p>Costa Rica — EARTH University</p>
-          <p>Correo: info@plataneraoroverde.cr</p>
-        </address>
+        <p class="footer__dato" style="margin-top:1.1rem">Guácimo, Limón — Universidad EARTH, Costa Rica</p>
+        <p class="footer__dato"><a href="mailto:info@plataneraoroverde.cr" style="text-decoration:underline;text-underline-offset:3px">info@plataneraoroverde.cr</a></p>
       </div>
 
-      <div class="footer-right">
-        <h4>Contacto</h4>
-        <form class="contact-form" action="#" method="post" aria-label="Formulario de contacto">
-          <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" /></label>
-          <label><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" /></label>
-          <label><span>Mensaje</span><textarea name="message" placeholder="Escribe tu mensaje"></textarea></label>
-          <button type="submit" class="btn-primary">Enviar</button>
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Explora</h4>
+        <a href="../historia.html">Nuestra historia</a>
+        <a href="../products/platano.html">Plátano</a>
+        <a href="../products/chips.html">Chips de plátano</a>
+        <a href="../operaciones.html">Operaciones</a>
+        <a href="../rsc.html">RSC</a>
+        <a href="../financiero.html">Financiero</a>
+      </nav>
+
+      <div>
+        <h4>Escríbenos</h4>
+        <!-- La web es estática: el formulario abre WhatsApp con el mensaje ya escrito. -->
+        <form class="form" id="form-contacto" novalidate>
+          <label><span>Nombre</span><input type="text" name="nombre" autocomplete="name" required /></label>
+          <label><span>Correo (opcional)</span><input type="email" name="correo" autocomplete="email" /></label>
+          <label><span>Mensaje</span><textarea name="mensaje" required></textarea></label>
+          <div class="form__pie">
+            <button type="submit" class="btn btn-oro">Enviar por WhatsApp</button>
+            <p class="form__estado" role="status" aria-live="polite"></p>
+          </div>
         </form>
       </div>
     </div>
-
-    <div class="site-credit container">
-      <p>© <span id="year"></span> Platanera Oro Verde — Fundador: Mateo Blacio</p>
+    <div class="contenedor footer__bottom">
+      <p>© <span id="anio"></span> Platanera Oro Verde — Universidad EARTH.</p>
+      <p>Fundador: <a href="https://youtube.com/shorts/ABFoJ6AMm5I?feature=shared" target="_blank" rel="noopener">Mateo Blacio</a></p>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
